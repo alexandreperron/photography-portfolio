@@ -4,11 +4,10 @@ This is my personal photography portfolio hosted on GitHub Pages.
 
 ## Live Site
 
-[https://alexandreperron.github.io/photography-portfolio/](https://alexandreperron.github.io/photography-portfolio/)
+www.aperronphoto.com
 
 ## Project Structure
 
-- `index.html` – main page
-- `images/` – photo gallery
+- `index.html` – main landing page
+- `images/` – photos
 - `CNAME` – custom domain configuration
-- `styles.css` – optional CSS file
