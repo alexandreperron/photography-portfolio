@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Photography Portfolio</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: #111;
+            background: #fff;
+        }
+
+        .container {
+            max-width: 1400px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 32px 24px;
+            font-size: 15px;
+        }
+
+        header a {
+            text-decoration: none;
+            color: #111;
+            margin-left: 24px;
+            opacity: 0.75;
+        }
+        header a:hover {
+            opacity: 1;
+        }
+
+        .hero-wrapper {
+            max-width: 1200px;
+            margin: 0 auto 80px auto; /* same as gallery */
+            padding: 0 24px;           /* same as gallery */
+        }
+
+        .hero {
+            max-width: 480px; /* optional, limits text width */
+            margin: 120px 0 0 0; /* top spacing only */
+        }
+
+        .hero h1 {
+            font-size: 32px;
+            line-height: 1.4;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        /* Gallery styling */
+        #gallery {
+            max-width: 1200px;
+            margin: 0 auto 80px auto;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-auto-rows: auto;
+            grid-gap: 20px;
+        }
+
+        #gallery img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 6px;
+            display: block;
+        }
+
+        /* Landscape → full width */
+        #gallery img.landscape {
+            grid-column: 1 / 3;
+        }
+
+        /* Portrait → side by side */
+        #gallery img.portrait {
+            grid-column: span 1;
+        }
+
+        /* Small screens */
+        @media (max-width: 700px) {
+            #gallery {
+                grid-template-columns: 1fr;
+            }
+            #gallery img.landscape,
+            #gallery img.portrait {
+                grid-column: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+    <!-- Header -->
+    <header>
+        <div class="logo">Alexandre Perron</div>
+        <nav>
+            <a href="https://www.instagram.com/alexndreper" target="_blank">Instagram</a>
+            <a href="https://bsky.app/profile/alexndreper.bsky.social" target="_blank">Bsky</a>
+        </nav>
+    </header>
+
+    <!-- Hero Intro -->
+    <div class="hero-wrapper">
+        <div class="hero">
+            <h1>
+                Photographs of home<br>
+                in and around Gaspesie
+            </h1>
+        </div>
+    </div>
+
+    <!-- Gallery -->
+    <main id="gallery">
+        <!-- Landscape images → full width -->
+        <img src="/images/7187 - sunset seascape in three parts-1 - web.jpg" class="landscape" loading="lazy" alt="">
+        <img src="/images/9056 - seeing ghosts 2 - web.jpg" class="landscape" loading="lazy" alt="">
+
+        <!-- Portrait images → side by side -->
+        <img src="/images/6646 - splashy rock - web.jpg" class="portrait" loading="lazy" alt="">
+        <img src="/images/7265 - dry sun-3 - web.jpg" class="portrait" loading="lazy" alt="">
+
+        <!-- Add more images below using "portrait" or "landscape" class -->
+    </main>
+
+</div>
+</body>
+</html>
