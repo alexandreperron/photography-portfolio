@@ -1,1 +1,1 @@
-console.log('Happy developing ✨')
+console.log('Hi! Hope you are enjoying my portfolio.');
