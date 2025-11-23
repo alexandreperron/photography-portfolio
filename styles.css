@@ -127,6 +127,11 @@ header a:hover {
     opacity: 0.6;
 }
 
+.profile {
+    width: 300px;
+    border-radius: 6px;
+    margin: 20px 0;
+}
 
 /* Mobile adjustments */
 @media (max-width: 700px) {
@@ -154,5 +159,9 @@ header a:hover {
     #gallery img.landscape,
     #gallery img.portrait {
         grid-column: 1;
+    }
+
+    .profile {
+        width: 160px;
     }
 }
