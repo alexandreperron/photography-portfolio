@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
             img.style.display = img.dataset.page == page ? "block" : "none";
         });
 
-        document.getElementById("pageNumber").textContent = `page ${page} / ${totalPages}`;
+        document.getElementById("pageNumber").textContent = `${page} / ${totalPages}`;
         document.getElementById("prevPage").disabled = page === 1;
         document.getElementById("nextPage").disabled = page === totalPages;
     }
