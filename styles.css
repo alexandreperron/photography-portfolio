@@ -108,7 +108,7 @@ header a:hover {
 }
 
 .footer-links {
-    margin-top: 0.25rem;
+    margin-top: 0.5rem;
 }
 
 .footer-links a {
@@ -125,6 +125,40 @@ header a:hover {
 .footer-links span {
     margin: 0 6px;
     opacity: 0.6;
+}
+
+/* gallery pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    margin: 40px 0 60px;
+    font-size: 0.95rem;
+}
+
+.pagination button {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.pagination button:hover:not(:disabled) {
+    opacity: 1;
+}
+
+.pagination button:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+#pageNumber {
+    opacity: 0.7;
 }
 
 /* Mobile adjustments */
