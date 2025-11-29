@@ -47,7 +47,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function showPage(page) {
         photos.forEach(img => {
-            img.style.display = img.dataset.page == page ? "block" : "none";
+            if (img.dataset.page == page) {
+                img.style.visibility = "visible";
+                img.style.position = "relative";
+                img.style.opacity = "1";
+            }
+            else {
+                img.style.visibility = "hidden";
+                img.style.position = "absolute";
+                img.style.opacity = "0";
+            }
         });
 
         updatePreviewBar(page);
@@ -81,6 +90,17 @@ document.addEventListener("DOMContentLoaded", () => {
         if (currentPage < totalPages) {
             currentPage++;
             showPage(currentPage);
+        }
+    });
+
+    photos.forEach(img => {
+        // If already loaded (cached), add class immediately
+        if (img.complete) {
+            img.classList.add("loaded");
+        } else {
+            img.addEventListener("load", () => {
+                img.classList.add("loaded");
+            });
         }
     });
 
