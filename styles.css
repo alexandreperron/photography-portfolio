@@ -242,7 +242,7 @@ header a:hover {
     }
     .preview-thumb {
         height: 56px;
-        max-width: 18%; /* ensures 5 per row + gaps fit */
+        max-width: 18%;
         object-fit: cover;
     }
 
