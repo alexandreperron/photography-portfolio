@@ -121,7 +121,7 @@ header a:hover {
     text-align: center;
     font-size: 0.85rem;
     color: #555;
-    margin-top: 1.5rem;
+    margin-top: 3rem;
     padding-bottom: 4rem;
     line-height: 1.6;
 }
@@ -207,8 +207,9 @@ header a:hover {
 }
 
 .paginationBottom {
-    margin-top: 14px;
-    margin-bottom: 60px;
+    /*margin-top: 14px;
+    margin-bottom: 60px;*/
+    display: none;
 }
 
 .pagination button {
@@ -240,7 +241,6 @@ header a:hover {
     margin-left: auto;
     margin-right: auto;
 }
-
 
 /* Mobile adjustments */
 @media (max-width: 700px) {
