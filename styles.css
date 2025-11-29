@@ -236,13 +236,14 @@ header a:hover {
     }
 
     #previewBar {
-        flex-wrap: wrap; /* enables centered multi-row layout */
         gap: 8px;
         padding: 0 12px;
         margin: 24px 0 16px 0;
     }
     .preview-thumb {
         height: 56px;
+        max-width: 18%; /* ensures 5 per row + gaps fit */
+        object-fit: cover;
     }
 
     #gallery {
