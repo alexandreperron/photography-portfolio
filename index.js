@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Initial load
     showPage(currentPage);
 
-    // Disable right-click and dragging
+    // Disable right-click and dragging on web (TODO: disable mobile native long-press)
     photos.forEach(img => {
         img.setAttribute("draggable", "false");
         img.addEventListener("contextmenu", (e) => e.preventDefault());
