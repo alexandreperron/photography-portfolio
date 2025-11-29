@@ -126,14 +126,68 @@ header a:hover {
     opacity: 0.6;
 }
 
+/* preview bar */
+/* preview bar (desktop + mobile base) */
+#previewBar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 40px 0 20px 0;
+    overflow-x: visible; /* allow wrapping rows instead of horizontal scroll */
+    box-sizing: border-box;
+    padding: 0 16px;
+}
+
+/* hide scrollbars only when overflow-x applies (retain previous behaviour on desktop) */
+#previewBar::-webkit-scrollbar { display: none; }
+#previewBar { scrollbar-width: none; }
+
+.preview-thumb {
+    height: 80px;
+    width: auto;
+    border-radius: 4px;
+    object-fit: cover;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s, transform 0.2s;
+    flex-shrink: 0;
+}
+
+/* Hover effect for devices that support it */
+@media (hover: hover) and (pointer: fine) {
+    .preview-thumb {
+        transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .preview-thumb:hover {
+        transform: scale(1.07);
+        opacity: 0.85;
+    }
+}
+
 /* gallery pagination */
 .pagination {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 14px;
-    margin: 40px 0 60px;
+    margin: 40px auto 20px auto;
     font-size: 0.95rem;
+
+    max-width: 1200px;  /* align with gallery */
+    padding: 0 24px;    /* same left/right padding */
+}
+
+.paginationTop {
+    margin-top: 30px;
+    margin-bottom: 14px;
+}
+
+.paginationBottom {
+    margin-top: 40px;
+    margin-bottom: 60px;
 }
 
 .pagination button {
@@ -160,6 +214,7 @@ header a:hover {
     opacity: 0.7;
 }
 
+
 /* Mobile adjustments */
 @media (max-width: 700px) {
     .logo {
@@ -178,6 +233,16 @@ header a:hover {
     }
     .hero h1 {
         font-size: 26px;
+    }
+
+    #previewBar {
+        flex-wrap: wrap; /* enables centered multi-row layout */
+        gap: 8px;
+        padding: 0 12px;
+        margin: 24px 0 16px 0;
+    }
+    .preview-thumb {
+        height: 56px;
     }
 
     #gallery {
