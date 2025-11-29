@@ -209,7 +209,7 @@ header a:hover {
 .paginationBottom {
     /*margin-top: 14px;
     margin-bottom: 60px;*/
-    display: none;
+    display: none !important;
 }
 
 .pagination button {
