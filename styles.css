@@ -127,7 +127,6 @@ header a:hover {
 }
 
 /* preview bar */
-/* preview bar (desktop + mobile base) */
 #previewBar {
     width: 100%;
     display: flex;
@@ -135,7 +134,7 @@ header a:hover {
     align-items: center;
     gap: 10px;
     margin: 40px 0 20px 0;
-    overflow-x: visible; /* allow wrapping rows instead of horizontal scroll */
+    overflow-x: visible;
     box-sizing: border-box;
     padding: 0 16px;
 }
