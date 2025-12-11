@@ -45,23 +45,31 @@ document.addEventListener("DOMContentLoaded", () => {
         nextPageBottom.disabled = currentPage === totalPages;
     }
 
+    // Replace at top:
+    const blocks = document.querySelectorAll("#gallery .photo-block");
+
+// Use blocks for preview/update and pagination visibility
     function showPage(page) {
-        photos.forEach(img => {
-            if (img.dataset.page == page) {
-                img.style.visibility = "visible";
-                img.style.position = "relative";
-                img.style.opacity = "1";
-            }
-            else {
-                img.style.visibility = "hidden";
-                img.style.position = "absolute";
-                img.style.opacity = "0";
+        blocks.forEach(block => {
+            const img = block.querySelector('img');
+            if (parseInt(img.dataset.page, 10) === page) {
+                // show the whole grid item
+                block.style.display = "";        // restore normal layout
+                // reset any previous inline styles on the image if you had them:
+                const image = block.querySelector('img');
+                image.style.position = "";
+                image.style.visibility = "";
+                image.style.opacity = "";
+            } else {
+                // hide the whole grid item (removes its space)
+                block.style.display = "none";
             }
         });
 
         updatePreviewBar(page);
         updatePaginationUI();
     }
+
 
     // Bottom pagination
     prevPageBottom.addEventListener("click", () => {
@@ -111,6 +119,19 @@ document.addEventListener("DOMContentLoaded", () => {
     photos.forEach(img => {
         img.setAttribute("draggable", "false");
         img.addEventListener("contextmenu", (e) => e.preventDefault());
+    });
+
+    // Reveal photograph title
+    document.querySelectorAll('.photo-block img').forEach(img => {
+        img.addEventListener('click', () => {
+            img.parentElement.classList.toggle('active');
+        });
+    });
+
+    document.querySelectorAll('.photo-block').forEach(block => {
+        block.addEventListener('click', () => {
+            block.classList.toggle('show-caption');
+        });
     });
 
 });
