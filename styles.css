@@ -71,20 +71,15 @@ header a:hover {
 }
 
 .hero h1 {
-    font-size: 44px;
-    line-height: 1.2;
-    letter-spacing: -0.4px;
+    font-size: 52px;
+    line-height: 1.15;
+    letter-spacing: -0.6px;
     font-weight: 300;
-    margin: 0;
-    text-wrap: balance;
 }
 
 .hero-subline {
     font-size: 18px;
-    line-height: 1.6;
-    margin-top: 14px;
-    color: #666;
-    letter-spacing: 0.2px;
+    opacity: 0.65;
 }
 
 /* Gallery styling — unchanged */
