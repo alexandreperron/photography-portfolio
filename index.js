@@ -16,6 +16,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const prevPageBottom = document.getElementById("prevPage");
     const nextPageBottom = document.getElementById("nextPage");
 
+    const firstPageTop = document.getElementById("firstPageTop");
+    const lastPageTop  = document.getElementById("lastPageTop");
+
+    const firstPageBottom = document.getElementById("firstPage");
+    const lastPageBottom  = document.getElementById("lastPage");
+
+
     function updatePreviewBar(page) {
         previewBar.innerHTML = "";
         const pageImages = [...photos].filter(img => parseInt(img.dataset.page) === page);
@@ -32,17 +39,21 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function updatePaginationUI() {
-        // Update page numbers
         pageNumberTop.textContent = `${currentPage} / ${totalPages}`;
         pageNumberBottom.textContent = `${currentPage} / ${totalPages}`;
 
-        // Enable/disable top buttons
-        prevPageTop.disabled = currentPage === 1;
-        nextPageTop.disabled = currentPage === totalPages;
+        const atStart = currentPage === 1;
+        const atEnd   = currentPage === totalPages;
 
-        // Enable/disable bottom buttons
-        prevPageBottom.disabled = currentPage === 1;
-        nextPageBottom.disabled = currentPage === totalPages;
+        prevPageTop.disabled = atStart;
+        firstPageTop.disabled = atStart;
+        nextPageTop.disabled = atEnd;
+        lastPageTop.disabled = atEnd;
+
+        prevPageBottom.disabled = atStart;
+        firstPageBottom.disabled = atStart;
+        nextPageBottom.disabled = atEnd;
+        lastPageBottom.disabled = atEnd;
     }
 
     // Replace at top:
@@ -134,4 +145,19 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    // First page
+    firstPageTop.addEventListener("click", () => goToPage(1));
+    firstPageBottom.addEventListener("click", () => goToPage(1));
+
+    // Last page
+    lastPageTop.addEventListener("click", () => goToPage(totalPages));
+    lastPageBottom.addEventListener("click", () => goToPage(totalPages));
+
+    function goToPage(page) {
+        currentPage = Math.min(Math.max(page, 1), totalPages);
+        showPage(currentPage);
+    }
+
 });
+
+
