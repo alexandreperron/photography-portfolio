@@ -238,7 +238,7 @@ header a:hover {
 }
 
 .pagination button:disabled {
-    opacity: 0.3;
+    opacity: 0.2;
     cursor: default;
 }
 
