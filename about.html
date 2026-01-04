@@ -24,12 +24,14 @@
     <!-- Header -->
     <div class="header-wrapper">
         <header>
-            <div class="logo">
-                <a href="index.html" style="text-decoration:none; color:inherit;">Alexandre Perron</a>
-            </div>
+            <div class="logo">Alexandre Perron</div>
             <nav class="nav">
-                <a href="index.html">Gallery</a>
-                <a href="https://www.instagram.com/alexndreper" target="_blank">Instagram</a>
+                <button class="burger" aria-label="Menu">&#9776;</button>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="https://www.instagram.com/alexndreper" target="_blank">Instagram</a>
+                </div>
             </nav>
         </header>
     </div>
@@ -70,5 +72,22 @@
     </footer>
 
 </div>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const burger = document.querySelector('.nav .burger');
+        const navLinks = document.querySelector('.nav-links');
+
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Optional: close menu when a link is clicked
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    });
+</script>
 </body>
 </html>

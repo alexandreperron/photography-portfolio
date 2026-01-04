@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     console.log('Hi! Hope you are enjoying my portfolio.');
 
+
+
     const photos = document.querySelectorAll("#gallery img");
     const previewBar = document.getElementById("previewBar");
 
@@ -22,6 +24,68 @@ document.addEventListener("DOMContentLoaded", () => {
     const firstPageBottom = document.getElementById("firstPage");
     const lastPageBottom  = document.getElementById("lastPage");
 
+    const selectedSection = document.getElementById("selected-works");
+    const selectedGrid = document.querySelector(".selected-grid");
+    const gallerySection = document.getElementById("gallery");
+
+    const burger = document.querySelector('.nav .burger');
+    const navLinks = document.querySelector('.nav-links');
+
+    burger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+    });
+
+    const selectedBlocks = [...document.querySelectorAll("#gallery .photo-block")]
+        .filter(block => block.querySelector("img")?.dataset.selected === "true");
+
+    selectedBlocks.forEach(block => {
+        const clone = block.cloneNode(true);
+
+        // Reset pagination side effects
+        clone.style.display = "";
+        clone.removeAttribute("style");
+
+        const img = clone.querySelector("img");
+        if (img) {
+            img.style.width = "";
+            img.style.maxWidth = "";
+            img.style.position = "";
+            img.style.visibility = "";
+            img.style.opacity = "";
+        }
+
+        selectedGrid.appendChild(clone);
+    });
+
+    function showSelectedWorks() {
+        document.body.classList.add("view-selected");
+        selectedSection.style.display = "block";
+        gallerySection.style.display = "none";
+    }
+
+    function showGallery() {
+        document.body.classList.remove("view-selected");
+        selectedSection.style.display = "none";
+        gallerySection.style.display = "";
+
+        showPage(currentPage);
+    }
+
+    document.querySelectorAll("[data-view]").forEach(link => {
+        link.addEventListener("click", e => {
+            e.preventDefault();
+            const view = link.dataset.view;
+
+            if (view === "selected") showSelectedWorks();
+            if (view === "gallery") showGallery();
+        });
+    });
 
     function updatePreviewBar(page) {
         previewBar.innerHTML = "";
@@ -59,8 +123,12 @@ document.addEventListener("DOMContentLoaded", () => {
     // Replace at top:
     const blocks = document.querySelectorAll("#gallery .photo-block");
 
-// Use blocks for preview/update and pagination visibility
+    // Use blocks for preview/update and pagination visibility
     function showPage(page) {
+        if (gallerySection.style.display === "none") {
+            // Disable pagination logic when not in gallery
+            return;
+        }
         blocks.forEach(block => {
             const img = block.querySelector('img');
             if (parseInt(img.dataset.page, 10) === page) {
@@ -123,9 +191,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Initial load
-    showPage(currentPage);
-
     // Disable right-click and dragging on web (TODO: disable mobile native long-press)
     photos.forEach(img => {
         img.setAttribute("draggable", "false");
@@ -139,11 +204,14 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    document.querySelectorAll('.photo-block').forEach(block => {
-        block.addEventListener('click', () => {
-            block.classList.toggle('show-caption');
+    function bindPhotoBlockInteractions(scope = document) {
+        scope.querySelectorAll('.photo-block').forEach(block => {
+            block.addEventListener('click', () => {
+                block.classList.toggle('active');
+            });
         });
-    });
+    }
+
 
     // First page
     firstPageTop.addEventListener("click", () => goToPage(1));
@@ -157,6 +225,10 @@ document.addEventListener("DOMContentLoaded", () => {
         currentPage = Math.min(Math.max(page, 1), totalPages);
         showPage(currentPage);
     }
+
+    // Initial load
+    showPage(currentPage);
+    showSelectedWorks();
 
 });
 
