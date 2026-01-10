@@ -50,6 +50,7 @@ header {
     background: none;
     border: none;
     cursor: pointer;
+    color: black;
 }
 
 .nav-links {
@@ -177,6 +178,10 @@ header a:hover {
 .footer-links span {
     margin: 0 6px;
     opacity: 0.6;
+}
+
+.footer-about {
+    margin-top: 160px;
 }
 
 /* preview bar */
