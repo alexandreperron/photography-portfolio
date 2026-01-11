@@ -51,6 +51,7 @@ header {
     border: none;
     cursor: pointer;
     color: black;
+    opacity: 0.6;
 }
 
 .nav-links {
