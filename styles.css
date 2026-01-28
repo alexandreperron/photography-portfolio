@@ -74,38 +74,8 @@ header a:hover {
     opacity: 1;
 }
 
-/* Hero wrapper aligns exactly like header & gallery */
-.hero-wrapper {
-    max-width: 1000px;
-    margin: 0 auto 80px auto;
-    padding: 0 24px;
-}
-
-.hero-wrapper p {
-    margin-bottom: 1rem;
-}
-
-.hero {
-    max-width: 1000px;
-    margin: 48px auto 32px auto;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 52px;
-    line-height: 1.15;
-    letter-spacing: -0.6px;
-    font-weight: 300;
-}
-
-.hero-subline {
-    font-size: 18px;
-    opacity: 0.65;
-}
-
-/* Gallery styling — unchanged */
 #gallery {
-    max-width: 1000px;
+    max-width: 900px;
     margin: 60px auto 30px;
     padding: 0 24px;
     display: grid;
@@ -130,18 +100,6 @@ header a:hover {
 
 #gallery img:hover {
     box-shadow: 0 4px 18px rgba(0,0,0,0.08);
-}
-
-.selected-works {
-    max-width: 1000px;
-    margin: 60px auto 120px;
-    padding: 0 24px;
-}
-
-.selected-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 28px;
 }
 
 .photo-block.landscape {
@@ -183,109 +141,6 @@ header a:hover {
 
 .footer-about {
     margin-top: 160px;
-}
-
-/* preview bar */
-#previewBar {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin: 40px 0 20px 0;
-    overflow-x: visible;
-    box-sizing: border-box;
-    padding: 0 16px;
-}
-
-/* hide scrollbars only when overflow-x applies (retain previous behaviour on desktop) */
-#previewBar::-webkit-scrollbar { display: none; }
-#previewBar { scrollbar-width: none; }
-
-.preview-thumb {
-    height: 80px;
-    width: auto;
-    border: 1px solid rgba(0,0,0,0.1);
-    border-radius: 3px;
-    object-fit: cover;
-    cursor: pointer;
-    opacity: 0.75;
-    transition: opacity 0.2s ease;
-    flex-shrink: 0;
-}
-
-/* Hover effect for devices that support it */
-@media (hover: hover) and (pointer: fine) {
-    .preview-thumb {
-        transition: transform 0.2s ease, opacity 0.2s ease;
-    }
-
-    .preview-thumb:hover {
-        transform: scale(1.07);
-        opacity: 1;
-    }
-}
-
-/* gallery pagination */
-.pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 14px;
-    margin: 40px auto 20px auto;
-    font-size: 0.9rem;
-    letter-spacing: 0.5px;
-
-    max-width: 1000px;  /* align with gallery */
-    padding: 0 24px;    /* same left/right padding */
-}
-
-.paginationTop {
-    margin-top: 60px;
-    margin-bottom: 14px;
-}
-
-.paginationBottom {
-    /*margin-top: 14px;
-    margin-bottom: 60px;*/
-    display: none !important;
-}
-
-.pagination button {
-    background: none;
-    border: none;
-    padding: 0;
-    font: inherit;
-    color: inherit;
-    cursor: pointer;
-    transition: opacity 0.2s;
-    min-width: 32px;
-    text-align: center;
-    font-size: 1.8rem;
-    letter-spacing: 0;
-    opacity: 0.45;
-}
-
-.pagination button:hover:not(:disabled) {
-    opacity: 0.9;
-}
-
-.pagination button:disabled {
-    opacity: 0.2;
-    cursor: default;
-}
-
-#pageNumber,
-#pageNumberTop {
-    opacity: 0.35;
-    min-width: 60px;
-    text-align: center;
-}
-
-.pagination, #previewBar {
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .photo-block {
@@ -352,30 +207,6 @@ header a:hover {
         font-size: 13px;
     }
 
-    .hero {
-        margin: 48px auto 32px auto;
-        text-align: center;
-        max-width: 320px;
-    }
-
-    .hero h1 {
-        font-size: 30px;
-    }
-
-    .hero-subline {
-        font-size: 15px;
-    }
-
-    #previewBar {
-        gap: 8px;
-        padding: 0 12px;
-    }
-    .preview-thumb {
-        height: 56px;
-        max-width: 18%;
-        object-fit: cover;
-    }
-
     #gallery {
         grid-template-columns: 1fr;
     }
@@ -387,10 +218,6 @@ header a:hover {
     .photo-block.landscape,
     .photo-block.portrait {
         grid-column: 1;
-    }
-
-    .pagination button {
-        font-size: 1.3rem;
     }
 
 }
