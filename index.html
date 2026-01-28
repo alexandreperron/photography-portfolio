@@ -38,8 +38,8 @@
             <nav class="nav">
                 <button class="burger" aria-label="Menu">&#9776;</button>
                 <div class="nav-links">
-                    <a href="#" data-view="selected">Selected Works</a>
-                    <a href="#" data-view="gallery">Gallery</a>
+                    <a href="#" data-view="selected">Gallery</a>
+                    <!--<a href="#" data-view="gallery">Portfolios</a>-->
                     <a href="about.html">About</a>
                     <a href="https://www.instagram.com/alexndreper" target="_blank">Instagram</a>
                 </div>
@@ -52,13 +52,13 @@
     </section>
 
     <!-- Pagination Top -->
-    <div class="pagination paginationTop">
+    <!--<div class="pagination paginationTop">
         <button id="firstPageTop" aria-label="First page">&laquo;</button>
         <button id="prevPageTop" aria-label="Previous page">&lsaquo;</button>
         <span id="pageNumberTop"></span>
         <button id="nextPageTop" aria-label="Next page">&rsaquo;</button>
         <button id="lastPageTop" aria-label="Last page">&raquo;</button>
-    </div>
+    </div>-->
 
     <!-- Preview Bar -->
     <div id="previewBar"></div>
@@ -66,11 +66,16 @@
     <!-- Gallery -->
     <div id="gallery">
 
-        <!-- all images with page number, landscapes are full width and portraits are in pairs -->
-        <!-- 5 images per page if includes a portrait pair, otherwise 4 landscapes only -->
+        <!-- Data selected means it shows on the landing page, the others are on the full portfolio with pagination-->
+
         <div class="photo-block landscape">
-            <img data-page="1" src="https://alexandreperron.github.io/photography-portfolio/images/9056-seeing-ghosts.jpg" loading="lazy" alt="Minimalist long exposure seascape from Gaspésie">
-            <div class="photo-caption">Seeing ghosts — I</div>
+            <img data-selected="true" data-page="1" src="https://alexandreperron.github.io/photography-portfolio/images/2162-harbor-bloc.jpg" loading="lazy" alt="Iceberg photography by Alexandre Perron">
+            <div class="photo-caption">North Harbor — I</div>
+        </div>
+
+        <div class="photo-block landscape">
+            <img data-page="9" src="https://alexandreperron.github.io/photography-portfolio/images/2972-dont-look-down.jpg" loading="lazy" alt="Montagne en Gaspésie en hiver">
+            <div class="photo-caption">Don't look down</div>
         </div>
 
         <div class="photo-block landscape">
@@ -78,32 +83,37 @@
             <div class="photo-caption">Seeing ghosts — II</div>
         </div>
 
-        <div class="photo-block landscape">
-            <img data-selected="true" data-page="1" src="https://alexandreperron.github.io/photography-portfolio/images/2162-harbor-bloc.jpg" loading="lazy" alt="Iceberg photography by Alexandre Perron">
-            <div class="photo-caption">North Harbor — I</div>
-        </div>
-
         <div class="photo-block portrait">
-            <img data-page="1" src="https://alexandreperron.github.io/photography-portfolio/images/7265-dry-sun.jpg" loading="lazy" alt="Backlit wildflowers on a Gaspésie beach photographed by Alexandre Perron">
+            <img data-selected="true" data-page="1" src="https://alexandreperron.github.io/photography-portfolio/images/7265-dry-sun.jpg" loading="lazy" alt="Backlit wildflowers on a Gaspésie beach photographed by Alexandre Perron">
             <div class="photo-caption">Dry sun</div>
         </div>
 
         <div class="photo-block portrait">
-            <img data-page="1" src="https://alexandreperron.github.io/photography-portfolio/images/6657-polo-beach.jpg" loading="lazy" alt="Husky dog walking on a Gaspésie beach at sunrise">
+            <img data-selected="true" data-page="1" src="https://alexandreperron.github.io/photography-portfolio/images/6657-polo-beach.jpg" loading="lazy" alt="Husky dog walking on a Gaspésie beach at sunrise">
             <div class="photo-caption">Pausing at sunset</div>
         </div>
 
-
         <div class="photo-block landscape">
-            <img data-selected="true" data-page="2" src="https://alexandreperron.github.io/photography-portfolio/images/2276-aurora.jpg" loading="lazy" alt="Northern lights in Gaspesie by Alexandre Perron">
-            <div class="photo-caption">Solar signals — I</div>
-        </div>
-
-        <div class="photo-block landscape">
-            <img data-page="2" src="https://alexandreperron.github.io/photography-portfolio/images/2252-aurora.jpg" loading="lazy" alt="Northern lights in Gaspesie by Alexandre Perron">
+            <img data-selected="true" data-page="2" src="https://alexandreperron.github.io/photography-portfolio/images/2252-aurora.jpg" loading="lazy" alt="Northern lights in Gaspesie by Alexandre Perron">
             <div class="photo-caption">Solar signals — II</div>
         </div>
 
+        <div class="photo-block landscape">
+            <img data-selected="true" data-page="4" src="https://alexandreperron.github.io/photography-portfolio/images/1349-colors-of-ice-v5.jpg" loading="lazy" alt="Landscape of frozen rocks by the sea in Gaspésie by Alexandre Perron">
+            <div class="photo-caption">Blue transit</div>
+        </div>
+
+        <div class="photo-block landscape">
+            <img data-selected="true" data-page="5" src="https://alexandreperron.github.io/photography-portfolio/images/3793-squirrel-snack.jpg" loading="lazy" alt="Squirrel snacking in a tree at sunset. A wildlife photo by Alexandre Perron">
+            <div class="photo-caption">Evening snack on a crisp autumn night</div>
+        </div>
+
+        <div class="photo-block landscape">
+            <img data-selected="true" data-page="3" src="https://alexandreperron.github.io/photography-portfolio/images/0732-snow-home.jpg" loading="lazy" alt="Winter scene of a house among the trees in Gaspésie by Alexandre Perron">
+            <div class="photo-caption">Snow home</div>
+        </div>
+
+        <!--
         <div class="photo-block portrait">
             <img data-page="2" src="https://alexandreperron.github.io/photography-portfolio/images/6646-splashy-rocks.jpg" loading="lazy" alt="Rocky shoreline wave splash in Gaspésie, Québec">
             <div class="photo-caption">It's a simple photo</div>
@@ -126,11 +136,6 @@
         </div>
 
         <div class="photo-block landscape">
-            <img data-page="3" src="https://alexandreperron.github.io/photography-portfolio/images/0732-snow-home.jpg" loading="lazy" alt="Winter scene of a house among the trees in Gaspésie by Alexandre Perron">
-            <div class="photo-caption">Snow home</div>
-        </div>
-
-        <div class="photo-block landscape">
             <img data-page="3" src="https://alexandreperron.github.io/photography-portfolio/images/7187-sunset-seascape.jpg" loading="lazy" alt="Sunset seascape photographed in Gaspésie by Alexandre Perron">
             <div class="photo-caption">A Sunset seascape</div>
         </div>
@@ -149,11 +154,6 @@
         <div class="photo-block landscape">
             <img data-page="4" src="https://alexandreperron.github.io/photography-portfolio/images/1253-frozen-world.jpg" loading="lazy" alt="Photograph of a frozen coastline in Gaspésie during winter by Alexandre Perron">
             <div class="photo-caption">Everything's rapidly freezing</div>
-        </div>
-
-        <div class="photo-block landscape">
-            <img data-selected="true" data-page="4" src="https://alexandreperron.github.io/photography-portfolio/images/1349-colors-of-ice-v5.jpg" loading="lazy" alt="Landscape of frozen rocks by the sea in Gaspésie by Alexandre Perron">
-            <div class="photo-caption">Blue transit</div>
         </div>
 
         <div class="photo-block landscape">
@@ -265,17 +265,18 @@
             <img data-page="9" src="https://alexandreperron.github.io/photography-portfolio/images/7285-polo-morning.jpg" loading="lazy" alt="Husky walking along the shoreline in soft morning light, Gaspésie">
             <div class="photo-caption">Apollo at peaceful blue hour</div>
         </div>
+-->
 
     </div>
 
     <!-- Pagination Bottom -->
-    <div class="pagination paginationBottom">
+<!--    <div class="pagination paginationBottom">
         <button id="firstPage" aria-label="First page">&laquo;</button>
         <button id="prevPage" aria-label="Previous page">&lsaquo;</button>
         <span id="pageNumber"></span>
         <button id="nextPage" aria-label="Next page">&rsaquo;</button>
         <button id="lastPage" aria-label="Last page">&raquo;</button>
-    </div>
+    </div>-->
 
     <!-- Footer -->
     <footer class="footer">
