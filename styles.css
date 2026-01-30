@@ -150,19 +150,42 @@ header a:hover {
 
 .photo-caption {
     font-size: 0.75rem;
-    opacity: 0;
-    max-height: 0;
     overflow: hidden;
     transition: opacity 0.25s ease, max-height 0.25s ease;
     margin-top: 0.35rem;
     text-align: right;
     font-style: italic;
-}
-
-/* Hover (desktop) */
-.photo-block.active .photo-caption {
     opacity: .5;
     max-height: 40px;
+}
+
+/* Hero wrapper aligns exactly like header & gallery */
+.hero-wrapper {
+    max-width: 1000px;
+    margin: 0 auto 80px auto;
+    padding: 0 24px;
+}
+
+.hero-wrapper p {
+    margin-bottom: 1rem;
+}
+
+.hero {
+    max-width: 1000px;
+    margin: 48px auto 32px auto;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 52px;
+    line-height: 1.15;
+    letter-spacing: -0.6px;
+    font-weight: 300;
+}
+
+.hero-subline {
+    font-size: 18px;
+    opacity: 0.65;
 }
 
 /* Mobile adjustments */
@@ -218,6 +241,20 @@ header a:hover {
     .photo-block.landscape,
     .photo-block.portrait {
         grid-column: 1;
+    }
+
+    .hero {
+        margin: 48px auto 32px auto;
+        text-align: center;
+        max-width: 320px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero-subline {
+        font-size: 15px;
     }
 
 }

@@ -1,9 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-    console.log('Hi! Hope you are enjoying my portfolio.');
+    console.log('Hi! Welcome to my photography portfolio.');
 
     const photos = document.querySelectorAll("#gallery img");
-    const gallerySection = document.getElementById("gallery");
-
     const burger = document.querySelector('.nav .burger');
     const navLinks = document.querySelector('.nav-links');
 
@@ -16,9 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
             navLinks.classList.remove('active');
         });
     });
-
-    const selectedBlocks = [...document.querySelectorAll("#gallery .photo-block")]
-        .filter(block => block.querySelector("img")?.dataset.selected === "true");
 
     photos.forEach(img => {
         // If already loaded (cached), add class immediately
