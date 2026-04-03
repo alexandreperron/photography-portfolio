@@ -32,10 +32,21 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Disable right-click and dragging on web (TODO: disable mobile native long-press)
+    // Disable right-click, dragging, and mobile long-press
     photos.forEach(img => {
         img.setAttribute("draggable", "false");
+
+        // Desktop: block right-click context menu
         img.addEventListener("contextmenu", (e) => e.preventDefault());
+
+        // Mobile: block long-press native menu
+        let pressTimer;
+        img.addEventListener("touchstart", (e) => {
+            pressTimer = setTimeout(() => e.preventDefault(), 500);
+        }, { passive: false });
+
+        img.addEventListener("touchend", () => clearTimeout(pressTimer));
+        img.addEventListener("touchmove", () => clearTimeout(pressTimer));
     });
 
     // Reveal photograph title and update URL hash on click

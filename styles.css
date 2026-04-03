@@ -238,6 +238,12 @@ header a:hover {
     opacity: 1 !important;
 }
 
+/* disable image downloads */
+#gallery img {
+    -webkit-touch-callout: none;
+    user-select: none;
+    -webkit-user-select: none;
+}
 
 /* Mobile adjustments */
 @media (max-width: 700px) {
