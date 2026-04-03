@@ -215,6 +215,29 @@ header a:hover {
     margin-bottom: 1.2rem;
 }
 
+/* Share button inside caption */
+.share-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.75rem;
+    opacity: 0;
+    margin-left: 8px;
+    padding: 0;
+    vertical-align: middle;
+    transition: opacity 0.2s ease;
+}
+
+/* Show the button when the caption is visible */
+.photo-block:hover .share-btn,
+.photo-block.active .share-btn {
+    opacity: 0.5;
+}
+
+.share-btn:hover {
+    opacity: 1 !important;
+}
+
 
 /* Mobile adjustments */
 @media (max-width: 700px) {
