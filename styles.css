@@ -15,24 +15,23 @@ body.view-selected #previewBar {
     width: 100%;
 }
 
-/* Ensure header uses same max-width + padding as gallery */
 .header-wrapper {
-    max-width: 950px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 40px;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 26px;
-    padding: 24px 0;
+    padding: 28px 0;
 }
 
 .logo {
-    font-size: 20px;
-    opacity: 0.6;
+    font-size: 18px;
+    letter-spacing: 0.04em;
+    opacity: 0.65;
 }
 
 .logo a {
@@ -46,7 +45,7 @@ header {
 }
 
 .nav .burger {
-    display: none; /* hide burger on desktop */
+    display: none;
     font-size: 24px;
     background: none;
     border: none;
@@ -57,12 +56,14 @@ header {
 
 .nav-links {
     display: flex;
-    gap: 24px;
+    gap: 28px;
 }
 
 .nav a {
-    font-size: 16px;
-    opacity: 0.6;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    opacity: 0.5;
 }
 
 header a {
@@ -71,49 +72,67 @@ header a {
     margin-left: 24px;
     opacity: 0.75;
 }
+
 header a:hover {
     opacity: 1;
 }
 
 #gallery {
-    max-width: 950px;
-    margin: 60px auto 30px;
-    padding: 0 24px;
+    max-width: 1200px;
+    margin: 52px auto 30px;
+    padding: 0 40px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: auto;
-    grid-gap: 28px;
+    grid-gap: 16px;
+}
+
+.photo-block {
+    display: flex;
+    flex-direction: column;
 }
 
 .photo-block img {
     width: 100%;
     height: auto;
-    object-fit: cover;
-    border-radius: 3px;
     display: block;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+    border-radius: 1px;
+    transition: opacity 0.3s ease;
+}
+
+.photo-block:hover img {
+    opacity: 0.87;
 }
 
 #gallery img.loaded {
     opacity: 1;
-    transform: translateY(0px);
 }
 
 .photo-block.landscape {
-    grid-column: 1 / 3;
+    grid-column: span 2;
 }
 
 .photo-block.portrait {
     grid-column: span 1;
 }
 
+.photo-caption {
+    font-size: 0.67rem;
+    margin-top: 0.5rem;
+    text-align: left;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    opacity: 0.42;
+}
+
 .footer {
     text-align: center;
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     color: #555;
-    margin-top: 140px;
+    margin-top: 80px;
     padding-bottom: 4rem;
     line-height: 1.6;
+    letter-spacing: 0.03em;
 }
 
 .footer-links {
@@ -136,25 +155,11 @@ header a:hover {
     opacity: 0.6;
 }
 
-.photo-block {
-    display: flex;
-    flex-direction: column;
-}
-
-.photo-caption {
-    font-size: 0.75rem;
-    margin-top: 0.6rem;
-    text-align: left;
-    font-style: normal;
-    letter-spacing: 0.04em;
-    opacity: 0.65;
-}
-
-/* Hero wrapper aligns exactly like header & gallery */
+/* Hero wrapper */
 .hero-wrapper {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto 80px auto;
-    padding: 0 24px;
+    padding: 0 40px;
 }
 
 .hero-wrapper p {
@@ -187,7 +192,6 @@ header a:hover {
 }
 
 /* About page */
-
 .about-wrapper {
     max-width: 480px;
     margin: 72px auto 120px;
@@ -228,7 +232,6 @@ header a:hover {
     transition: opacity 0.2s ease;
 }
 
-/* Show the button when the caption is visible */
 .photo-block:hover .share-btn,
 .photo-block.active .share-btn {
     opacity: 0.5;
@@ -238,14 +241,30 @@ header a:hover {
     opacity: 1 !important;
 }
 
-/* disable image downloads */
+/* Disable image downloads */
 #gallery img {
     -webkit-touch-callout: none;
     user-select: none;
     -webkit-user-select: none;
 }
 
-/* Mobile adjustments */
+/* Tablet: 2-column grid */
+@media (max-width: 900px) and (min-width: 701px) {
+    #gallery {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 14px;
+    }
+
+    .photo-block.landscape {
+        grid-column: span 2;
+    }
+
+    .photo-block.portrait {
+        grid-column: span 1;
+    }
+}
+
+/* Mobile */
 @media (max-width: 700px) {
     .logo {
         font-size: 14px;
@@ -257,13 +276,13 @@ header a:hover {
     }
 
     .nav .burger {
-        display: block; /* show burger */
+        display: block;
     }
 
     .nav-links {
-        display: none; /* hide links by default */
+        display: none;
         position: absolute;
-        top: 100%; /* below header */
+        top: 100%;
         right: -16px;
         width: 180px;
         padding: 20px;
@@ -276,13 +295,12 @@ header a:hover {
 
     .nav-links a {
         margin: 8px 0;
-        font-size: 15px;
+        font-size: 14px;
         padding: 6px 0;
-        letter-spacing: 0.02em;
+        letter-spacing: 0.05em;
         opacity: 0.55;
     }
 
-    /* Show menu when active */
     .nav-links.active {
         display: flex;
     }
@@ -292,16 +310,16 @@ header a:hover {
     }
 
     #gallery {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
     }
 
-    .selected-grid {
-        grid-template-columns: 1fr;
+    .photo-block.landscape {
+        grid-column: span 2;
     }
 
-    .photo-block.landscape,
     .photo-block.portrait {
-        grid-column: 1;
+        grid-column: span 1;
     }
 
     .hero {
@@ -324,5 +342,4 @@ header a:hover {
         padding-left: 20px;
         padding-right: 20px;
     }
-
 }
