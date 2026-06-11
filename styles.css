@@ -78,7 +78,7 @@ header a:hover {
 }
 
 #gallery {
-    max-width: 1600px;
+    max-width: 1200px;
     margin: 52px auto 30px;
     padding: 0 16px;
     display: grid;
