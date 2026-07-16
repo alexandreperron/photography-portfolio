@@ -1,45 +1,50 @@
 document.addEventListener("DOMContentLoaded", () => {
-    console.log('Hi! Welcome to my photography portfolio.');
 
-    const photos = document.querySelectorAll("#gallery img");
-    const burger = document.querySelector('.nav .burger');
-    const navLinks = document.querySelector('.nav-links');
+    /* ---------- Nav (sidebar on desktop, dropdown panel on mobile) ---------- */
+    const toggle = document.getElementById('menuToggle');
+    const panel = document.getElementById('navPanel');
 
-    burger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
+    if (toggle && panel) {
+        const closeNav = () => {
+            panel.classList.remove('open');
+            toggle.setAttribute('aria-expanded', 'false');
+            toggle.textContent = 'Menu';
+        };
 
-    navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
+        toggle.addEventListener('click', () => {
+            const isOpen = panel.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', String(isOpen));
+            toggle.textContent = isOpen ? 'Close' : 'Menu';
         });
-    });
+
+        panel.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', closeNav);
+        });
+    }
+
+    /* ---------- Gallery (only runs on pages that have #gallery) ---------- */
+    const photos = document.querySelectorAll("#gallery img");
+    if (!photos.length) return;
 
     // Give each photo-block an ID derived from the image filename
     photos.forEach(img => {
-        const slug = img.src.split('/').pop().replace('.jpg', '');
+        const slug = img.src.split('/').pop().replace(/\.[a-zA-Z]+$/, '');
         img.closest('.photo-block').id = slug;
     });
 
     photos.forEach(img => {
-        // If already loaded (cached), add class immediately
         if (img.complete) {
             img.classList.add("loaded");
         } else {
-            img.addEventListener("load", () => {
-                img.classList.add("loaded");
-            });
+            img.addEventListener("load", () => img.classList.add("loaded"));
         }
     });
 
     // Disable right-click, dragging, and mobile long-press
     photos.forEach(img => {
         img.setAttribute("draggable", "false");
-
-        // Desktop: block right-click context menu
         img.addEventListener("contextmenu", (e) => e.preventDefault());
 
-        // Mobile: block long-press native menu
         let pressTimer;
         img.addEventListener("touchstart", (e) => {
             pressTimer = setTimeout(() => e.preventDefault(), 500);
@@ -90,5 +95,4 @@ document.addEventListener("DOMContentLoaded", () => {
             }, 100);
         }
     }
-
 });

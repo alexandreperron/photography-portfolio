@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76e973f5-1167-426f-a809-54d5c2601677" name="Changes" comment="" />
+    <list default="true" id="76e973f5-1167-426f-a809-54d5c2601677" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/project-appalachian-trail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project-winter-by-the-sea.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,23 +29,23 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.000000639320249" />
-      <entry key="MS500" value="1.094918303527042" />
-      <entry key="S2" value="3.854591590396568" />
-      <entry key="S5" value="9.975849727553232" />
-      <entry key="S10" value="17.224366684439467" />
-      <entry key="S30" value="29.46843588747691" />
-      <entry key="S60" value="36.58909257950206" />
-      <entry key="M2" value="45.99696239070598" />
-      <entry key="M5" value="64.56046102840135" />
-      <entry key="M10" value="79.88168541201668" />
-      <entry key="M15" value="87.47540456234542" />
-      <entry key="M30" value="96.9761966925213" />
-      <entry key="H1" value="102.62635244913434" />
-      <entry key="H2" value="105.71612502308274" />
-      <entry key="H4" value="107.33291526780228" />
-      <entry key="D1" value="108.7185819519583" />
-      <entry key="W1" value="108.95970894274882" />
+      <entry key="MS100" value="1.0002527503871355" />
+      <entry key="MS500" value="1.2088911429772025" />
+      <entry key="S2" value="3.547492693972196" />
+      <entry key="S5" value="9.452861040304251" />
+      <entry key="S10" value="16.85514353477853" />
+      <entry key="S30" value="29.665931385429946" />
+      <entry key="S60" value="37.08744416195341" />
+      <entry key="M2" value="46.68055745029181" />
+      <entry key="M5" value="65.38245311018717" />
+      <entry key="M10" value="80.77148338213432" />
+      <entry key="M15" value="88.39493401015699" />
+      <entry key="M30" value="97.93158115934737" />
+      <entry key="H1" value="103.60274224199085" />
+      <entry key="H2" value="106.70396380365251" />
+      <entry key="H4" value="108.32674148553485" />
+      <entry key="D1" value="109.7175396793575" />
+      <entry key="W1" value="109.95955971581317" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -57,23 +67,23 @@
       <entry key="W1" value="0.0" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.06163956760514764" />
-      <entry key="MS500" value="0.6391184144905938" />
-      <entry key="S2" value="3.6406813928457584" />
-      <entry key="S5" value="9.858753459702559" />
-      <entry key="S10" value="17.15174184321144" />
-      <entry key="S30" value="29.434036365564946" />
-      <entry key="S60" value="36.563171944422905" />
-      <entry key="M2" value="45.972047803887364" />
-      <entry key="M5" value="64.54043046318927" />
-      <entry key="M10" value="79.86819646250744" />
-      <entry key="M15" value="87.46538602493517" />
-      <entry key="M30" value="96.9705882964619" />
-      <entry key="H1" value="102.62337939081107" />
-      <entry key="H2" value="105.71459359109986" />
-      <entry key="H4" value="107.3321379688251" />
-      <entry key="D1" value="108.71845076200078" />
-      <entry key="W1" value="108.9596901607434" />
+      <entry key="MS100" value="2.683296401620448E-4" />
+      <entry key="MS500" value="0.3127149468366374" />
+      <entry key="S2" value="3.067018039675379" />
+      <entry key="S5" value="9.200974009489356" />
+      <entry key="S10" value="16.708798506383438" />
+      <entry key="S30" value="29.605235974119466" />
+      <entry key="S60" value="37.04816858042628" />
+      <entry key="M2" value="46.64893542398109" />
+      <entry key="M5" value="65.35972054569842" />
+      <entry key="M10" value="80.75663347585878" />
+      <entry key="M15" value="88.38400476698494" />
+      <entry key="M30" value="97.92551527667676" />
+      <entry key="H1" value="103.5995398077611" />
+      <entry key="H2" value="106.70231751127962" />
+      <entry key="H4" value="108.32590671133325" />
+      <entry key="D1" value="109.71739890377215" />
+      <entry key="W1" value="109.95953956427277" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -117,8 +127,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/images" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/images" />
       <recent name="$PROJECT_DIR$/icons" />
     </key>
   </component>
@@ -234,6 +244,8 @@
       <workItem from="1781194108185" duration="436000" />
       <workItem from="1781403449611" duration="369000" />
       <workItem from="1782950996751" duration="221000" />
+      <workItem from="1782951409603" duration="41000" />
+      <workItem from="1784229580597" duration="1269000" />
     </task>
     <servers />
   </component>
