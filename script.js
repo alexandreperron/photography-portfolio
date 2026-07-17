@@ -22,6 +22,19 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    /* ---------- Copy-email button (contact page fallback) ---------- */
+    const copyEmailBtn = document.getElementById('copyEmailBtn');
+    if (copyEmailBtn) {
+        copyEmailBtn.addEventListener('click', () => {
+            const email = copyEmailBtn.dataset.email;
+            navigator.clipboard.writeText(email).then(() => {
+                const original = copyEmailBtn.textContent;
+                copyEmailBtn.textContent = 'Copied';
+                setTimeout(() => { copyEmailBtn.textContent = original; }, 2000);
+            });
+        });
+    }
+
     /* ---------- Gallery (only runs on pages that have #gallery) ---------- */
     const photos = document.querySelectorAll("#gallery img");
     if (!photos.length) return;

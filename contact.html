@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Contact | Alexandre Perron</title>
+
+    <meta name="description" content="Get in touch with photographer Alexandre Perron.">
+    <meta name="author" content="Alexandre Perron">
+    <meta property="og:title" content="Contact | Alexandre Perron">
+    <meta property="og:description" content="Get in touch with photographer Alexandre Perron.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.aperronphoto.com/contact.html">
+
+    <link rel="canonical" href="https://www.aperronphoto.com/contact.html" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="favicon-32.png">
+</head>
+
+<body>
+<div class="site">
+
+    <!-- Sidebar / nav -->
+    <aside class="sidebar">
+        <div class="sidebar-row">
+            <a href="index.html" class="brand">Alexandre<br>Perron</a>
+            <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navPanel">Menu</button>
+        </div>
+        <div class="nav-panel" id="navPanel">
+            <nav class="side-nav">
+                <a href="gallery.html" class="side-link">Featured</a>
+                <a href="index.html" class="side-link">Projects</a>
+                <a href="about.html" class="side-link">About</a>
+            </nav>
+            <div class="sidebar-foot">
+                <a href="https://www.instagram.com/alexndreper" target="_blank" class="foot-link">Instagram</a>
+                <a href="contact.html" class="foot-link">Contact</a>
+                <div class="copyright">© 2026 Alexandre Perron</div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Content -->
+    <main class="content">
+
+        <div class="page-head">
+            <p class="eyebrow">Get in touch</p>
+            <h1>Contact</h1>
+            <p class="lede">Have a project, a print request, or just want to say hello? Send a message below.</p>
+        </div>
+
+        <!--
+            This form posts to Formspree (https://formspree.io), a free service that emails you
+            submissions without needing a server of your own. To activate it:
+              1. Create a free account at https://formspree.io
+              2. Create a new form and copy the endpoint it gives you
+                 (looks like https://formspree.io/f/xyzabcde)
+              3. Replace YOUR_FORM_ID in the form's action attribute below with that ID
+        -->
+        <form class="contact-form" action="https://formspree.io/f/xojgebgp" method="POST">
+            <input type="hidden" name="_subject" value="New message from aperronphoto.com">
+            <input type="hidden" name="_next" value="https://www.aperronphoto.com/thank-you.html">
+            <!-- Honeypot field to deter simple spam bots — kept hidden from real visitors -->
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+            <div class="form-field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Send message</button>
+        </form>
+
+        <p class="contact-alt">
+            Prefer email directly? alexandre.sendmail@gmail.com
+            <button type="button" id="copyEmailBtn" class="copy-email-btn" data-email="alexandre.sendmail@gmail.com">Copy</button>
+        </p>
+
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
