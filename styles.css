@@ -378,6 +378,101 @@ img { max-width: 100%; }
     margin-bottom: 0;
 }
 
+/* ==========================================================================
+   Contact page
+   ========================================================================== */
+.contact-form {
+    max-width: 480px;
+    margin: 24px 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-field label {
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.form-field input,
+.form-field textarea {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    color: var(--ink);
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--line);
+    padding: 10px 0;
+    outline: none;
+    transition: border-color 0.15s ease;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+    border-color: var(--accent);
+}
+
+.form-field textarea { resize: vertical; }
+
+.btn-submit {
+    align-self: flex-start;
+    background: var(--ink);
+    color: var(--bg);
+    border: none;
+    padding: 14px 30px;
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    margin-top: 6px;
+}
+
+.btn-submit:hover { background: var(--accent); }
+
+.contact-alt {
+    max-width: 480px;
+    margin: 36px 20px 60px;
+    font-size: 0.82rem;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.copy-email-btn {
+    background: none;
+    border: 1px solid var(--line);
+    color: var(--ink);
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    cursor: pointer;
+    transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.copy-email-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.thank-you-page {
+    max-width: var(--content-max);
+    margin: 0 auto;
+    padding: 0 20px 100px;
+}
+
 
 
 /* ==========================================================================
@@ -482,6 +577,10 @@ img { max-width: 100%; }
     .back-link { margin: 40px 40px 100px; }
 
     .about-page { padding: 0 40px 120px; }
+
+    .contact-form { margin: 32px 40px 0; }
+    .contact-alt { margin: 40px 40px 100px; }
+    .thank-you-page { padding: 0 40px 140px; }
 
     .about-layout {
         flex-direction: row;
