@@ -22,6 +22,16 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    /* ---------- Contact form: clear stale values if restored via back/forward cache ---------- */
+    const contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+        window.addEventListener('pageshow', (event) => {
+            if (event.persisted) {
+                contactForm.reset();
+            }
+        });
+    }
+
     /* ---------- Copy-email button (contact page fallback) ---------- */
     const copyEmailBtn = document.getElementById('copyEmailBtn');
     if (copyEmailBtn) {
