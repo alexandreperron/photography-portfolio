@@ -382,14 +382,16 @@ img { max-width: 100%; }
    Contact page
    ========================================================================== */
 .contact-form {
-    max-width: 480px;
-    margin: 24px 20px 0;
+    max-width: var(--content-max);
+    margin: 24px auto 0;
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
     gap: 22px;
 }
 
 .form-field {
+    max-width: 480px;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -440,8 +442,9 @@ img { max-width: 100%; }
 .btn-submit:hover { background: var(--accent); }
 
 .contact-alt {
-    max-width: 480px;
-    margin: 36px 20px 60px;
+    max-width: var(--content-max);
+    margin: 36px auto 60px;
+    padding: 0 20px;
     font-size: 0.82rem;
     color: var(--muted);
     display: flex;
@@ -578,8 +581,8 @@ img { max-width: 100%; }
 
     .about-page { padding: 0 40px 120px; }
 
-    .contact-form { margin: 32px 40px 0; }
-    .contact-alt { margin: 40px 40px 100px; }
+    .contact-form { padding: 0 40px; }
+    .contact-alt { padding: 0 40px; }
     .thank-you-page { padding: 0 40px 140px; }
 
     .about-layout {
