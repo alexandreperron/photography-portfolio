@@ -372,11 +372,13 @@ img { max-width: 100%; }
     line-height: 1.5;
 }
 
-.about-text p:last-of-type {
+.about-text .about-signoff {
     color: var(--muted);
     font-size: 0.85rem;
     margin-bottom: 0;
 }
+
+
 
 /* ==========================================================================
    Footer (project/about page fallback footer, kept minimal)
