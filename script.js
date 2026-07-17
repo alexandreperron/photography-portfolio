@@ -26,10 +26,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const copyEmailBtn = document.getElementById('copyEmailBtn');
     if (copyEmailBtn) {
         copyEmailBtn.addEventListener('click', () => {
-            const email = copyEmailBtn.dataset.email;
+            const email = atob(copyEmailBtn.dataset.emailB64);
             navigator.clipboard.writeText(email).then(() => {
                 const original = copyEmailBtn.textContent;
-                copyEmailBtn.textContent = 'Copied';
+                copyEmailBtn.textContent = 'Copied to clipboard';
                 setTimeout(() => { copyEmailBtn.textContent = original; }, 2000);
             });
         });
