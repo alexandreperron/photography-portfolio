@@ -48,7 +48,15 @@ const translations = {
 
         'project.eyebrow': 'Project',
         'project.appalachian.lede': 'The photographs you will see from this project were taken on hikes around the International Appalachian Trail, across all seasons. I documented days and days of hiking forested areas, mountain peaks and coastlines with my dog Apollo, often without cell signal: Only us, hiking gear and a camera. The stories are based on harsh weather and seasonal conditions, people and animals we meet, and the changing, unique views the wild eastern coast has to offer.',
-        'project.winter.lede': 'Living by the estuary in Eastern Canada allows for a special kind of daily photography. The winters are long, dark, and incredible. We experience frequent northern lights, fractured and frozen coastlines and an interesting wildlife to human population ratio. Home is unique and worth sharing.'
+        'project.winter.lede': 'Living by the estuary in Eastern Canada allows for a special kind of daily photography. The winters are long, dark, and incredible. We experience frequent northern lights, fractured and frozen coastlines and an interesting wildlife to human population ratio. Home is unique and worth sharing.',
+
+        'nav.blog': 'Blog',
+        'blog.eyebrow': 'Video',
+        'blog.lede': 'Behind-the-scenes videos and photography reviews, whenever I find the time to make them.',
+        'blog.subscribe': 'Subscribe on YouTube',
+        'blog.comingSoon': 'Coming soon',
+        'blog.video1.title': '6 Months with the Nikkor Z 40mm + 28mm — A Two-Lens Kit Review',
+        'blog.video1.desc': 'A look back at half a year shooting landscapes and seascapes with just two prime lenses.'
     },
     fr: {
         'nav.featured': 'En vedette',
@@ -94,7 +102,15 @@ const translations = {
 
         'project.eyebrow': 'Projet',
         'project.appalachian.lede': "Les photographies de ce projet ont été prises lors de randonnées sur le Sentier international des Appalaches, à travers toutes les saisons. J'y ai documenté de nombreuses journées de marche en forêt, en montagne et sur les côtes, avec mon chien Apollo, souvent sans réseau cellulaire : seulement nous, l'équipement de randonnée et un appareil photo. Ces histoires racontent la météo et les conditions saisonnières parfois rudes, les gens et les animaux rencontrés en chemin, ainsi que les paysages changeants et uniques qu'offre cette côte est sauvage.",
-        'project.winter.lede': "Vivre au bord de l'estuaire, dans l'Est du Canada, permet une forme particulière de photographie au quotidien. Les hivers y sont longs, sombres et incroyables. On y observe souvent des aurores boréales, des côtes fracturées et gelées, ainsi qu'un rapport faune-population plutôt unique. Ce coin de pays est unique et mérite d'être partagé."
+        'project.winter.lede': "Vivre au bord de l'estuaire, dans l'Est du Canada, permet une forme particulière de photographie au quotidien. Les hivers y sont longs, sombres et incroyables. On y observe souvent des aurores boréales, des côtes fracturées et gelées, ainsi qu'un rapport faune-population plutôt unique. Ce coin de pays est unique et mérite d'être partagé.",
+
+        'nav.blog': 'Blogue',
+        'blog.eyebrow': 'Vidéo',
+        'blog.lede': "Des vidéos en coulisses et des revues de matériel photo, quand je trouve le temps d'en faire.",
+        'blog.subscribe': "S'abonner sur YouTube",
+        'blog.comingSoon': 'Bientôt disponible',
+        'blog.video1.title': '6 mois avec les Nikkor Z 40mm + 28mm — Revue d\'un kit à deux objectifs',
+        'blog.video1.desc': "Un retour sur six mois à photographier paysages et bords de mer avec seulement deux objectifs à focale fixe."
     }
 };
 
@@ -165,6 +181,24 @@ document.addEventListener("DOMContentLoaded", () => {
             link.addEventListener('click', closeNav);
         });
     }
+
+    /* ---------- Video cards (blog page): click thumbnail to swap in a real embed ---------- */
+    document.querySelectorAll('.video-card:not(.is-coming-soon)').forEach(card => {
+        const trigger = card.querySelector('.video-card-media');
+        const videoId = card.dataset.youtubeId;
+        if (!trigger || !videoId) return;
+
+        trigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            const iframe = document.createElement('iframe');
+            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+            iframe.className = 'video-card-media';
+            iframe.setAttribute('frameborder', '0');
+            iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+            iframe.setAttribute('allowfullscreen', '');
+            trigger.replaceWith(iframe);
+        }, { once: true });
+    });
 
     /* ---------- Contact form: clear stale values if restored via back/forward cache ---------- */
     const contactForm = document.querySelector('.contact-form');

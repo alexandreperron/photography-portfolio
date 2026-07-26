@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Blog | Alexandre Perron</title>
+
+    <meta name="description" content="Videos and behind-the-scenes photography content by Alexandre Perron.">
+    <meta name="author" content="Alexandre Perron">
+    <meta property="og:title" content="Blog | Alexandre Perron">
+    <meta property="og:description" content="Videos and behind-the-scenes photography content by Alexandre Perron.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.aperronphoto.com/blog.html">
+
+    <link rel="canonical" href="https://www.aperronphoto.com/blog.html" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="favicon-32.png">
+</head>
+
+<body>
+<div class="site">
+
+    <!-- Sidebar / nav -->
+    <aside class="sidebar">
+        <div class="sidebar-row">
+            <a href="index.html" class="brand">Alexandre<br>Perron</a>
+            <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navPanel" data-i18n="menu.open">Menu</button>
+        </div>
+        <div class="nav-panel" id="navPanel">
+            <nav class="side-nav">
+                <a href="gallery.html" class="side-link" data-i18n="nav.featured">Featured</a>
+                <a href="index.html" class="side-link" data-i18n="nav.projects">Projects</a>
+                <a href="about.html" class="side-link" data-i18n="nav.about">About</a>
+                <a href="blog.html" class="side-link is-active" data-i18n="nav.blog">Blog</a>
+            </nav>
+            <div class="sidebar-foot">
+                <a href="https://www.instagram.com/alexndreper" target="_blank" class="foot-link">Instagram</a>
+                <a href="contact.html" class="foot-link" data-i18n="foot.contact">Contact</a>
+                <div class="lang-switch">
+                    <button type="button" class="lang-link" data-lang="en">EN</button>
+                    <span class="lang-sep">/</span>
+                    <button type="button" class="lang-link" data-lang="fr">FR</button>
+                </div>
+                <div class="copyright">© 2026 Alexandre Perron</div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Content -->
+    <main class="content">
+
+        <div class="page-head">
+            <p class="eyebrow" data-i18n="blog.eyebrow">Video</p>
+            <h1 data-i18n="nav.blog">Blog</h1>
+            <p class="lede" data-i18n="blog.lede">Behind-the-scenes videos and photography reviews, whenever I find the time to make them.</p>
+        </div>
+
+        <a href="https://www.youtube.com/@alexandre-perron" target="_blank" class="subscribe-btn" data-i18n="blog.subscribe">Subscribe on YouTube</a>
+
+        <div class="video-grid">
+
+            <!--
+                First video — not uploaded yet, so this card links out to the channel instead of playing inline.
+                Once it's live on YouTube:
+                  1. Remove the "is-coming-soon" class below
+                  2. Set data-youtube-id to the real video ID (the part after "v=" in the YouTube URL)
+                  3. Change the <a class="video-card-media" ...> tag to <button type="button" class="video-card-media" aria-label="...">
+                     (a button, not a link, since clicking it will now play the video in place instead of navigating away)
+                  4. Swap the thumbnail image src to https://img.youtube.com/vi/YOUR_VIDEO_ID/maxresdefault.jpg
+                  5. Remove the "Coming soon" badge span
+                Once those are set, script.js will automatically turn the click into an inline embedded player.
+            -->
+            <div class="video-card is-coming-soon" data-youtube-id="">
+                <a class="video-card-media" href="https://www.youtube.com/@alexandre-perron" target="_blank" aria-label="Coming soon on YouTube">
+                    <img src="https://alexandreperron.github.io/photography-portfolio/images/7803-lighthouse-metis-web.jpg" alt="Preview image for an upcoming video" loading="lazy">
+                    <span class="video-badge" data-i18n="blog.comingSoon">Coming soon</span>
+                </a>
+                <div class="video-card-meta">
+                    <h2 data-i18n="blog.video1.title">6 Months with the Nikkor Z 40mm + 28mm — A Two-Lens Kit Review</h2>
+                    <p data-i18n="blog.video1.desc">A look back at half a year shooting landscapes and seascapes with just two prime lenses.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
