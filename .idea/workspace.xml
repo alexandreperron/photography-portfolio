@@ -19,23 +19,23 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000003668898791" />
-      <entry key="MS500" value="1.091550057766589" />
-      <entry key="S2" value="4.704250003900897" />
-      <entry key="S5" value="13.041001383888606" />
-      <entry key="S10" value="21.3186975144304" />
-      <entry key="S30" value="32.80739759670855" />
-      <entry key="S60" value="39.187720504682" />
-      <entry key="M2" value="46.35745033838565" />
-      <entry key="M5" value="55.85076722843292" />
-      <entry key="M10" value="65.41685379731939" />
-      <entry key="M15" value="74.70924604431549" />
-      <entry key="M30" value="114.68476221022229" />
-      <entry key="H1" value="231.83635770103757" />
-      <entry key="H2" value="412.5405189356695" />
-      <entry key="H4" value="579.4746778054996" />
-      <entry key="D1" value="785.9018129030782" />
-      <entry key="W1" value="829.4694710288666" />
+      <entry key="MS100" value="1.00000000000005" />
+      <entry key="MS500" value="1.0031429045612006" />
+      <entry key="S2" value="2.026398748686079" />
+      <entry key="S5" value="7.994919896365032" />
+      <entry key="S10" value="16.73254550550824" />
+      <entry key="S30" value="31.080381807172273" />
+      <entry key="S60" value="38.90646863665329" />
+      <entry key="M2" value="46.99302906097757" />
+      <entry key="M5" value="57.1895398455137" />
+      <entry key="M10" value="67.02935222500074" />
+      <entry key="M15" value="76.41441057261319" />
+      <entry key="M30" value="116.45915317854573" />
+      <entry key="H1" value="233.60907994245204" />
+      <entry key="H2" value="414.3385867908376" />
+      <entry key="H4" value="581.3329246656949" />
+      <entry key="D1" value="787.8697805948742" />
+      <entry key="W1" value="831.4646415014606" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -57,23 +57,23 @@
       <entry key="W1" value="0.0" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.09875517777070593" />
-      <entry key="MS500" value="0.6954360162497523" />
-      <entry key="S2" value="4.511695800554694" />
-      <entry key="S5" value="12.92361339270989" />
-      <entry key="S10" value="21.231781713544233" />
-      <entry key="S30" value="32.74865246609974" />
-      <entry key="S60" value="39.131774799716204" />
-      <entry key="M2" value="46.30851029834672" />
-      <entry key="M5" value="55.82069386571111" />
-      <entry key="M10" value="65.39895063208675" />
-      <entry key="M15" value="74.69621920194298" />
-      <entry key="M30" value="114.67618449695867" />
-      <entry key="H1" value="231.82882734522838" />
-      <entry key="H2" value="412.53416702179607" />
-      <entry key="H4" value="579.4702912343217" />
-      <entry key="D1" value="785.9008305805341" />
-      <entry key="W1" value="829.4693230985405" />
+      <entry key="MS100" value="0.28126462117220286" />
+      <entry key="MS500" value="0.7774230539760006" />
+      <entry key="S2" value="1.8878860791056493" />
+      <entry key="S5" value="7.864748244656907" />
+      <entry key="S10" value="16.626127861426163" />
+      <entry key="S30" value="31.010355564251615" />
+      <entry key="S60" value="38.84443374707636" />
+      <entry key="M2" value="46.940765262897905" />
+      <entry key="M5" value="57.15789746348541" />
+      <entry key="M10" value="67.01058978207084" />
+      <entry key="M15" value="76.40079100130873" />
+      <entry key="M30" value="116.45026997690998" />
+      <entry key="H1" value="233.60139570788556" />
+      <entry key="H2" value="414.33215733391484" />
+      <entry key="H4" value="581.3284988358931" />
+      <entry key="D1" value="787.8687915896394" />
+      <entry key="W1" value="831.4644926115868" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -119,8 +119,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/images" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/icons" />
     </key>
   </component>
@@ -253,6 +253,7 @@
       <workItem from="1785060515632" duration="227000" />
       <workItem from="1785103754360" duration="598000" />
       <workItem from="1785613780556" duration="883000" />
+      <workItem from="1785626601298" duration="49000" />
     </task>
     <servers />
   </component>
