@@ -23,7 +23,7 @@ const translations = {
         'project.winter.desc': 'Living by the St. Lawrence Estuary through harsh winters',
         'project.reford.title': 'Reford gardens',
         'project.reford.desc': 'Casual visits to the Reford gardens',
-        'project.reford.lede': 'The Reford gardens offer a sensory experience that I am lucky to frequently immersive myself in. This is the story of those casual visits to the gardens, in the style of street photography.',
+        'project.reford.lede': 'The Reford gardens offer a sensory experience that I am lucky to frequently immersive myself in. These are stories of casual visits to the gardens, in the style of street photography.',
 
         'about.eyebrow': 'Photographer',
         'about.lede': 'Hobby photographer based in Gaspésie, Québec.',
@@ -80,7 +80,7 @@ const translations = {
         'project.winter.desc': "Vivre au bord de l'estuaire du Saint-Laurent à travers des hivers rigoureux",
         'project.reford.title': 'Jardins de Métis',
         'project.reford.desc': 'Visites occasionnelles des jardins de Métis',
-        'project.reford.lede': "Les jardins de Métis offrent une expérience sensorielle dans laquelle j'ai la chance de fréquenmment m'immerger. Voici les histoires de ces visites aux jardins, sous un style de photographie de rue.",
+        'project.reford.lede': "Les jardins de Métis offrent une expérience sensorielle dans laquelle j'ai la chance de fréquemment m'immerger. Voici les histoires de visites aux jardins, sous un style de photographie de rue.",
 
         'about.eyebrow': 'Photographe',
         'about.lede': 'Photographe amateur basé en Gaspésie, au Québec.',
