@@ -59,7 +59,9 @@ const translations = {
         'blog.subscribe': 'Subscribe on YouTube',
         'blog.comingSoon': 'Coming soon',
         'blog.video1.title': '6 Months with the Nikkor Z 40mm + 28mm — A Two-Lens Kit Review',
-        'blog.video1.desc': 'A look back at half a year shooting landscapes and seascapes with just two prime lenses.'
+        'blog.video1.desc': 'A look back at half a year shooting landscapes and seascapes with just two prime lenses.',
+        'blog.video2.title': 'Seascape Photography',
+        'blog.video2.desc': 'A how-to and discussion-based video on seascape photography'
     },
     fr: {
         'nav.featured': 'En vedette',
@@ -116,7 +118,9 @@ const translations = {
         'blog.subscribe': "S'abonner sur YouTube",
         'blog.comingSoon': 'Bientôt disponible',
         'blog.video1.title': '6 mois avec les Nikkor Z 40mm + 28mm — Revue d\'un kit à deux objectifs',
-        'blog.video1.desc': "Un retour sur six mois à photographier paysages et bords de mer avec seulement deux objectifs à focale fixe."
+        'blog.video1.desc': "Un retour sur six mois à photographier paysages et bords de mer avec seulement deux objectifs à focale fixe.",
+        'blog.video2.title': 'La photo de bord de mer',
+        'blog.video2.desc': 'Une discussion technique avec exemples photo, sur la photographie au bord de la mer.'
     }
 };
 
