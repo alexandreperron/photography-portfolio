@@ -24,6 +24,9 @@ const translations = {
         'project.reford.title': 'Reford gardens',
         'project.reford.desc': 'Casual visits to the Reford gardens',
         'project.reford.lede': 'The Reford gardens offer a sensory experience that I am lucky to frequently immersive myself in. These are stories of casual visits to the gardens, in the style of street photography.',
+        'project.mountains.bw.title': 'Mountains in black & white',
+        'project.mountains.bw.desc': 'project.mountains.bw.desc',
+        'project.mountains.bw.lede': 'This is the story of days in the mountains, in monochrome. Here the focus is on the light, on the shapes.',
 
         'about.eyebrow': 'Photographer',
         'about.lede': 'Hobby photographer based in Gaspésie, Québec.',
