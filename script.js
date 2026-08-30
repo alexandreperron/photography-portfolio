@@ -13,7 +13,7 @@ const translations = {
         'menu.close': 'Close',
 
         'gallery.eyebrow': 'Selected Work',
-        'gallery.lede': 'A curated set of photographs, centered around the Gaspé Peninsula',
+        'gallery.lede': 'A curated set of photographs',
 
         'project.eyebrow': 'Project',
         'projects.eyebrow': 'Long-form',
@@ -35,12 +35,12 @@ const translations = {
         'project.night.skies.lede': 'Astrophotography frames taken around my house, in Gaspésie.',
 
         'about.eyebrow': 'Photographer',
-        'about.lede': 'Hobby photographer based in Gaspésie, Québec.',
-        'about.p1': 'Welcome to my online portfolio, where I share my favourite visual stories.',
-        'about.p2': 'I most often document changing landscapes, breathing coastlines and thriving nature around Gaspésie.',
-        'about.p3': 'Most of my photography happens while walking and exploring with my dog Apollo.',
-        'about.p4': 'Always amazed by our surroundings, I use my photography to share some of what we observe and experience at home and elsewhere.',
-        'about.signoff': 'Thank you for taking the time to stop by.',
+        'about.lede': 'Photographer based in Gaspésie, Québec.',
+        'about.p1': "I'm a photographer based in Gaspésie, on the shore of the St. Lawrence Estuary.",
+        'about.p2': 'Most of my work starts close to home - coastal walks with my husky Apollo, hikes up the surrounding peaks - and extends to city breaks and further travels.',
+        'about.p3': 'I often shoot with a minimalist kit built around prime lenses, favoring a deliberate, unhurried approach to composition.',
+        'about.p4': 'My photography is how I try to share the way I experience moments and places.',
+        'about.signoff': 'Thanks for stopping by, and feel free to get in touch if any of this resonates.',
 
         'contact.eyebrow': 'Get in touch',
         'contact.lede': 'Have a project, a print request, or just want to say hello? Send a message below.',
@@ -96,12 +96,12 @@ const translations = {
         'project.night.skies.lede': "Images d'astrophotographie réalisées près de la maison, en Gaspésie.",
 
         'about.eyebrow': 'Photographe',
-        'about.lede': 'Photographe amateur basé en Gaspésie, au Québec.',
-        'about.p1': 'Bienvenue sur mon portfolio en ligne, où je partage mes histoires visuelles préférées.',
-        'about.p2': "Je documente le plus souvent des paysages changeants, des côtes vivantes et une nature florissante autour de la Gaspésie.",
-        'about.p3': 'La majorité de mes photos sont prises en marchant et en explorant avec mon chien Apollo.',
-        'about.p4': "Toujours émerveillé par notre environnement, j'utilise la photographie pour partager un peu de ce que nous observons et vivons, ici et ailleurs.",
-        'about.signoff': "Merci d'avoir pris le temps de faire un tour ici.",
+        'about.lede': 'Photographe basé en Gaspésie, au Québec.',
+        'about.p1': "Je suis un photographe basé en Gaspésie, sur les rives de l'estuaire du Saint-Laurent.",
+        'about.p2': "La majorité de mon travail commence près de chez moi - promenades côtières avec mon husky Apollo, randonnées sur les sommets environnants - et s'étend aux escapades urbaines et aux voyages plus lointains.",
+        'about.p3': "Je photographie souvent avec un équipement minimaliste bâti autour d'objectifs à focale fixe, privilégiant une approche réfléchie et posée de la composition.",
+        'about.p4': "Ma photographie est ma façon de partager comment je vis les moments et les lieux.",
+        'about.signoff': "Merci de votre visite, et n'hésitez pas à me contacter si tout cela vous parle.",
 
         'contact.eyebrow': 'Entrer en contact',
         'contact.lede': "Un projet, une demande d'impression, ou simplement envie de dire bonjour? Envoyez un message ci-dessous.",
