@@ -77,7 +77,7 @@ const translations = {
         'menu.close': 'Fermer',
 
         'gallery.eyebrow': 'Sélection de photos',
-        'gallery.lede': 'Une sélection de photographies, centrée sur la péninsule gaspésienne',
+        'gallery.lede': 'Une sélection de photographies',
 
         'project.eyebrow': 'Projet',
         'projects.eyebrow': 'Format long',
