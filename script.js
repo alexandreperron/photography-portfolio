@@ -66,7 +66,9 @@ const translations = {
         'blog.video1.title': '6 Months with the Nikkor Z 40mm + 28mm — A Two-Lens Kit Review',
         'blog.video1.desc': 'A look back at half a year shooting landscapes and seascapes with just two prime lenses.',
         'blog.video2.title': 'Seascape Photography',
-        'blog.video2.desc': 'A how-to and discussion-based video on seascape photography'
+        'blog.video2.desc': 'A how-to and discussion-based video on seascape photography',
+        'blog.video3.title': '10 photos - 1 Location - 1 Prime lens',
+        'blog.video3.desc': 'An evening challenge of shooting 10 photos in a single location with a single prime'
     },
     fr: {
         'nav.featured': 'En vedette',
@@ -127,7 +129,9 @@ const translations = {
         'blog.video1.title': '6 mois avec les Nikkor Z 40mm + 28mm — Revue d\'un kit à deux objectifs',
         'blog.video1.desc': "Un retour sur six mois à photographier paysages et bords de mer avec seulement deux objectifs à focale fixe.",
         'blog.video2.title': 'La photo de bord de mer',
-        'blog.video2.desc': 'Une discussion technique avec exemples photo, sur la photographie au bord de la mer.'
+        'blog.video2.desc': 'Une discussion technique avec exemples photo, sur la photographie au bord de la mer.',
+        'blog.video3.title': '10 photos - 1 endroit - 1 lentille fixe',
+        'blog.video3.desc': "Défi d'une soirée: 10 photos à un seul endroit avec une seule lentille à focale fixe."
     }
 };
 
