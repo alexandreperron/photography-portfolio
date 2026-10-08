@@ -54,7 +54,7 @@ const translations = {
 
         'thanks.eyebrow': 'Thanks',
         'thanks.title': 'Message sent',
-        'thanks.lede': "Your message is on its way — I'll get back to you as soon as I can.",
+        'thanks.lede': "Your message is on its way. I'll get back to you as soon as possible.",
         'back.home': '← Back home',
         'back.projects': '← All projects',
 
@@ -116,7 +116,7 @@ const translations = {
 
         'thanks.eyebrow': 'Merci',
         'thanks.title': 'Message envoyé',
-        'thanks.lede': "Votre message est en route — je vous répondrai dès que possible.",
+        'thanks.lede': "Votre message est en route. Je vous répondrai dès que possible.",
         'back.home': "← Retour à l'accueil",
         'back.projects': '← Tous les projets',
 
