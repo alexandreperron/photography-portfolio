@@ -63,7 +63,7 @@ const translations = {
         'blog.lede': 'Behind-the-scenes videos and photography reviews, whenever I find the time to make them.',
         'blog.subscribe': 'Subscribe on YouTube',
         'blog.comingSoon': 'Coming soon',
-        'blog.video1.title': '6 Months with the Nikkor Z 40mm + 28mm — A Two-Lens Kit Review',
+        'blog.video1.title': '6 Months with the Nikkor Z 40mm + 28mm - A Two-Lens Kit Review',
         'blog.video1.desc': 'A look back at half a year shooting landscapes and seascapes with just two prime lenses.',
         'blog.video2.title': 'Seascape Photography',
         'blog.video2.desc': 'A how-to and discussion-based video on seascape photography',
