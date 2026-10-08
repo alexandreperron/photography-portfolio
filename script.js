@@ -125,7 +125,7 @@ const translations = {
         'blog.lede': "Des vidéos en coulisses et des revues de matériel photo, quand je trouve le temps d'en faire.",
         'blog.subscribe': "S'abonner sur YouTube",
         'blog.comingSoon': 'Bientôt disponible',
-        'blog.video1.title': '6 mois avec les Nikkor Z 40mm + 28mm — Revue d\'un kit à deux objectifs',
+        'blog.video1.title': '6 mois avec les Nikkor Z 40mm + 28mm - Revue d\'un kit à deux objectifs',
         'blog.video1.desc': "Un retour sur six mois à photographier paysages et bords de mer avec seulement deux objectifs à focale fixe.",
         'blog.video2.title': 'La photo de bord de mer',
         'blog.video2.desc': 'Une discussion technique avec exemples photo, sur la photographie au bord de la mer.',
