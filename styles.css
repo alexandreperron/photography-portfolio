@@ -501,14 +501,8 @@ img { max-width: 100%; }
 }
 
 .about-text p:first-of-type {
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-.about-text .about-signoff {
-    color: var(--muted);
     font-size: 0.85rem;
-    margin-bottom: 0;
+    line-height: 1.5;
 }
 
 /* ==========================================================================

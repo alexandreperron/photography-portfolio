@@ -36,8 +36,11 @@ const translations = {
 
         'about.eyebrow': 'Photographer',
         'about.lede': 'Based in Gaspésie, Quebec.',
-        'about.p4': 'Most of my work starts close to home, on the shore of the St. Lawrence Estuary. \nCoastal walks with my husky Apollo, hikes up the surrounding peaks. \nAlong with the occasional city breaks and further travels. \nI often shoot with a minimalist kit, favoring a deliberate, unhurried approach to composition. \nMy photography is how I share - what I discover and appreciate. \nThanks for stopping by, and feel free to get in touch if this resonates.',
-        'about.signoff': 'Thanks for stopping by, and feel free to get in touch if this resonates.',
+        'about.p1': 'Most of my work starts close to home, on the shore of the St. Lawrence Estuary. Coastal walks with my husky Apollo, hikes up the surrounding peaks.',
+        'about.p2': 'Along with the occasional city breaks and further travels.',
+        'about.p3': 'I often shoot with a minimalist kit, favoring a deliberate, unhurried approach to composition when possible.',
+        'about.p4': 'My photography is how I share - what I discover and appreciate.',
+        'about.p5': 'Thanks for stopping by, and feel free to get in touch if this resonates.',
 
         'contact.eyebrow': 'Get in touch',
         'contact.lede': 'Have a project, a print request, or just want to say hello? Send a message below.',
@@ -96,7 +99,11 @@ const translations = {
 
         'about.eyebrow': 'Photographe',
         'about.lede': 'Basé en Gaspésie, au Québec.',
-        'about.p4': "La majorité de mon travail commence près de chez moi, sur les rives de l'estuaire. \nPromenades côtières avec mon husky Apollo, randonnées sur les sommets environnants. \nPuis les escapades urbaines et voyages plus lointains. \nJe photographie souvent avec un équipement minimaliste, privilégiant une approche réfléchie et posée de la composition. \nMa photographie est ma façon de partager - ce que je découvre et apprécie. \nMerci de votre visite, et n'hésitez pas à m'écrire si cela vous parle.",
+        'about.p1': "La majorité de mon travail commence près de chez moi, sur les rives de l'estuaire. Promenades côtières avec mon husky Apollo, randonnées sur les sommets environnants.",
+        'about.p2': "Puis les escapades urbaines et voyages plus lointains.",
+        'about.p3': "Je photographie souvent avec un équipement minimaliste, privilégiant une approche réfléchie et posée de la composition lorsque possible.",
+        'about.p4': "Ma photographie est ma façon de partager - ce que je découvre et apprécie.",
+        'about.p5': "Merci de votre visite, et n'hésitez pas à m'écrire si cela vous parle.",
         'contact.eyebrow': 'Entrer en contact',
         'contact.lede': "Un projet, une demande d'impression, ou simplement envie de dire bonjour? Envoyez un message ci-dessous.",
         'form.label.name': 'Nom',
