@@ -36,7 +36,7 @@ const translations = {
 
         'about.eyebrow': 'Photographer',
         'about.lede': 'Based in Gaspésie, Quebec.',
-        'about.p2': 'Most of my work starts close to home, on the shore of the St. Lawrence Estuary. Coastal walks with my husky Apollo, hikes up the surrounding peaks. And the city breaks and further travels.',
+        'about.p2': 'Most of my work starts close to home, on the shore of the St. Lawrence Estuary. Coastal walks with my husky Apollo, hikes up the surrounding peaks. Along with the city breaks and further travels.',
         'about.p3': 'I often shoot with a minimalist kit, favoring a deliberate, unhurried approach to composition.',
         'about.p4': 'My photography is how I share - what I discover and appreciate.',
         'about.signoff': 'Thanks for stopping by, and feel free to get in touch if this resonates.',
@@ -98,7 +98,7 @@ const translations = {
 
         'about.eyebrow': 'Photographe',
         'about.lede': 'Basé en Gaspésie, au Québec.',
-        'about.p2': "La majorité de mon travail commence près de chez moi, sur les rives de l'estuaire. Promenades côtières avec mon husky Apollo, randonnées sur les sommets environnants. Puis les escapades urbaines aux voyages plus lointains.",
+        'about.p2': "La majorité de mon travail commence près de chez moi, sur les rives de l'estuaire. Promenades côtières avec mon husky Apollo, randonnées sur les sommets environnants. Puis les escapades urbaines et voyages plus lointains.",
         'about.p3': "Je photographie souvent avec un équipement minimaliste, privilégiant une approche réfléchie et posée de la composition.",
         'about.p4': "Ma photographie est ma façon de partager - ce que je découvre et apprécie.",
         'about.signoff': "Merci de votre visite, et n'hésitez pas à m'écrire si cela vous parle.",
