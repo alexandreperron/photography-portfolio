@@ -20,14 +20,11 @@ const translations = {
         'menu.open': 'Menu',
         'menu.close': 'Fermer',
 
-        'about.eyebrow': 'Photographe',
-        'about.lede': 'Basé en Gaspésie, au Québec.',
         'about.p1': "La majorité de mon travail commence près de chez moi, sur les rives de l'estuaire. Promenades côtières avec mon husky Apollo, randonnées sur les sommets environnants.",
         'about.p2': "Puis les escapades urbaines et voyages plus lointains.",
         'about.p3': "Je photographie souvent avec un équipement minimaliste, privilégiant une approche réfléchie et posée de la composition lorsque possible.",
         'about.p4': "Ma photographie est ma façon de partager - ce que je découvre et apprécie.",
         'about.p5': "Merci de votre visite, et n'hésitez pas à m'écrire si cela vous parle.",
-        'contact.eyebrow': 'Entrer en contact',
         'contact.lede': "Un projet, une demande d'impression, ou simplement envie de dire bonjour? Envoyez un message ci-dessous.",
         'form.label.name': 'Nom',
         'form.label.email': 'Courriel',
@@ -43,7 +40,6 @@ const translations = {
         'back.home': "← Retour à l'accueil",
 
         'nav.blog': 'Blogue',
-        'blog.eyebrow': 'Vidéo',
         'blog.lede': "Des vidéos en coulisses et des revues de matériel photo, quand je trouve le temps d'en faire.",
         'blog.video1.title': '6 mois avec les Nikkor Z 40mm + 28mm - Revue d\'un kit à deux objectifs',
         'blog.video1.desc': "Un retour sur six mois à photographier paysages et bords de mer avec seulement deux objectifs à focale fixe.",
