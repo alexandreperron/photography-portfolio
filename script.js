@@ -1,101 +1,24 @@
 /* ==========================================================================
    i18n — tiny translation layer
-   Each translatable element gets data-i18n="some.key" in the HTML.
+   English text lives in the HTML itself. Each translatable element carries
+   data-i18n="some.key" and its English text; on load, that text is read from
+   the page and remembered, so switching back to English needs no dictionary.
+   Only French is stored below. A key missing from French falls back to English.
    Language choice is stored in localStorage so it persists across page loads.
    ========================================================================== */
 const translations = {
+    // English is filled from the HTML at load (see captureEnglish).
+    // Only strings that JavaScript itself displays, and that never appear in the HTML, are listed here.
     en: {
-        'nav.featured': 'Featured',
-        'nav.projects': 'Projects',
-        'nav.about': 'About',
-        'foot.contact': 'Contact',
-        'menu.open': 'Menu',
         'menu.close': 'Close',
-
-        'gallery.eyebrow': 'Selected Work',
-        'gallery.lede': 'A curated set of photographs',
-
-        'project.eyebrow': 'Project',
-        'projects.eyebrow': 'Long-form',
-        'projects.lede': 'Visual stories told over multiple frames',
-        'project.appalachian.title': 'Appalachian Trail',
-        'project.appalachian.desc': 'Documenting solo trail days on foot with my dog',
-        'project.appalachian.lede': 'The photographs you will see from this project were taken on hikes around the International Appalachian Trail, across all seasons. I documented days and days of hiking forested areas, mountain peaks and coastlines with my dog Apollo, often without cell signal: Only us, hiking gear and a camera. The stories are based on harsh weather and seasonal conditions, people and animals we meet, and the changing, unique views the wild eastern coast has to offer.',
-        'project.winter.title': 'Winter by the Sea',
-        'project.winter.desc': 'Living by the St. Lawrence Estuary through harsh winters',
-        'project.winter.lede': 'Living by the estuary in Eastern Canada allows for a special kind of daily photography. The winters are long, dark, and incredible. We experience frequent northern lights, fractured and frozen coastlines and an interesting wildlife to human population ratio. Home is unique and worth sharing.',
-        'project.reford.title': 'Reford gardens',
-        'project.reford.desc': 'Casual visits to the Reford gardens',
-        'project.reford.lede': 'The Reford gardens offer a sensory experience that I am lucky to frequently immersive myself in. These are stories of casual visits to the gardens, in the style of street photography.',
-        'project.mountains.bw.title': 'Mountains in black & white',
-        'project.mountains.bw.desc': 'Light from the mountains',
-        'project.mountains.bw.lede': 'This is the story of days in the mountains, in monochrome. Here the focus is on the light, on the shapes.',
-        'project.night.skies.title': 'Night skies',
-        'project.night.skies.desc': 'Astrophotography in Gaspésie',
-        'project.night.skies.lede': 'Astrophotography frames taken around my house, in Gaspésie.',
-
-        'about.eyebrow': 'Photographer',
-        'about.lede': 'Based in Gaspésie, Quebec.',
-        'about.p1': 'Most of my work starts close to home, on the shore of the St. Lawrence Estuary. Coastal walks with my husky Apollo, hikes up the surrounding peaks.',
-        'about.p2': 'Along with the occasional city breaks and further travels.',
-        'about.p3': 'I often shoot with a minimalist kit, favoring a deliberate, unhurried approach to composition when possible.',
-        'about.p4': 'My photography is how I share - what I discover and appreciate.',
-        'about.p5': 'Thanks for stopping by, and feel free to get in touch if this resonates.',
-
-        'contact.eyebrow': 'Get in touch',
-        'contact.lede': 'Have a project, a print request, or just want to say hello? Send a message below.',
-        'form.label.name': 'Name',
-        'form.label.email': 'Email',
-        'form.label.message': 'Message',
-        'form.submit': 'Send message',
-        'contact.alt': 'Prefer email directly?',
-        'contact.copyBtn': 'Copy my email address',
-        'contact.copyBtn.copied': 'Copied to clipboard',
-
-        'thanks.eyebrow': 'Thanks',
-        'thanks.title': 'Message sent',
-        'thanks.lede': "Your message is on its way. I'll get back to you as soon as possible.",
-        'back.home': '← Back home',
-        'back.projects': '← All projects',
-
-        'nav.blog': 'Blog',
-        'blog.eyebrow': 'Video',
-        'blog.lede': 'Behind-the-scenes videos and photography reviews, whenever I find the time to make them.',
-        'blog.subscribe': 'Subscribe on YouTube',
-        'blog.comingSoon': 'Coming soon',
-        'blog.video1.title': '6 Months with the Nikkor Z 40mm + 28mm - A Two-Lens Kit Review',
-        'blog.video1.desc': 'A look back at half a year shooting landscapes and seascapes with just two prime lenses.',
-        'blog.video2.title': 'Seascape Photography',
-        'blog.video2.desc': 'A how-to and discussion-based video on seascape photography',
-        'blog.video3.title': '10 photos - 1 Location - 1 Prime lens',
-        'blog.video3.desc': 'An evening challenge of shooting 10 photos in a single location with a single prime'
+        'contact.copyBtn.copied': 'Copied to clipboard'
     },
     fr: {
         'nav.featured': 'En vedette',
-        'nav.projects': 'Projets',
         'nav.about': 'À propos',
         'foot.contact': 'Contact',
         'menu.open': 'Menu',
         'menu.close': 'Fermer',
-
-        'gallery.eyebrow': 'Sélection de photos',
-        'gallery.lede': 'Une sélection de photographies',
-
-        'project.eyebrow': 'Projet',
-        'projects.eyebrow': 'Format long',
-        'projects.lede': 'Des histoires visuelles racontées en plusieurs images',
-        'project.appalachian.title': 'Sentier des Appalaches',
-        'project.appalachian.desc': 'Des journées de randonnée en solo, à pied avec mon chien',
-        'project.appalachian.lede': "Les photographies de ce projet ont été prises lors de randonnées sur le Sentier international des Appalaches, à travers toutes les saisons. J'y ai documenté de nombreuses journées de marche en forêt, en montagne et sur les côtes, avec mon chien Apollo, souvent sans réseau cellulaire : seulement nous, l'équipement de randonnée et un appareil photo. Ces histoires racontent la météo et les conditions saisonnières parfois rudes, les gens et les animaux rencontrés en chemin, ainsi que les paysages changeants et uniques qu'offre cette côte est sauvage.",
-        'project.winter.title': 'Hiver en bord de mer',
-        'project.winter.desc': "Vivre au bord de l'estuaire du Saint-Laurent à travers des hivers rigoureux",
-        'project.winter.lede': "Vivre au bord de l'estuaire, dans l'Est du Canada, permet une forme particulière de photographie au quotidien. Les hivers y sont longs, sombres et incroyables. On y observe souvent des aurores boréales, des côtes fracturées et gelées, ainsi qu'un rapport faune-population plutôt unique. Ce coin de pays est unique et mérite d'être partagé.",
-        'project.reford.title': 'Jardins de Métis',
-        'project.reford.desc': 'Visites occasionnelles des jardins de Métis',
-        'project.reford.lede': "Les jardins de Métis offrent une expérience sensorielle dans laquelle j'ai la chance de fréquemment m'immerger. Voici les histoires de visites aux jardins, sous un style de photographie de rue.",
-        'project.night.skies.title': 'Ciel nocturne',
-        'project.night.skies.desc': 'Astrophotographie en Gaspésie',
-        'project.night.skies.lede': "Images d'astrophotographie réalisées près de la maison, en Gaspésie.",
 
         'about.eyebrow': 'Photographe',
         'about.lede': 'Basé en Gaspésie, au Québec.',
@@ -118,13 +41,10 @@ const translations = {
         'thanks.title': 'Message envoyé',
         'thanks.lede': "Votre message est en route. Je vous répondrai dès que possible.",
         'back.home': "← Retour à l'accueil",
-        'back.projects': '← Tous les projets',
 
         'nav.blog': 'Blogue',
         'blog.eyebrow': 'Vidéo',
         'blog.lede': "Des vidéos en coulisses et des revues de matériel photo, quand je trouve le temps d'en faire.",
-        'blog.subscribe': "S'abonner sur YouTube",
-        'blog.comingSoon': 'Bientôt disponible',
         'blog.video1.title': '6 mois avec les Nikkor Z 40mm + 28mm - Revue d\'un kit à deux objectifs',
         'blog.video1.desc': "Un retour sur six mois à photographier paysages et bords de mer avec seulement deux objectifs à focale fixe.",
         'blog.video2.title': 'La photo de bord de mer',
@@ -133,6 +53,13 @@ const translations = {
         'blog.video3.desc': "Défi d'une soirée: 10 photos à un seul endroit avec une seule lentille à focale fixe."
     }
 };
+
+function captureEnglish() {
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (!(key in translations.en)) translations.en[key] = el.textContent.trim();
+    });
+}
 
 function getLang() {
     const saved = localStorage.getItem('lang');
@@ -173,6 +100,7 @@ function setLang(lang) {
 document.addEventListener("DOMContentLoaded", () => {
 
     /* ---------- Language switch ---------- */
+    captureEnglish();
     const currentLang = getLang();
     applyTranslations(currentLang);
 
@@ -203,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     /* ---------- Video cards (blog page): click thumbnail to swap in a real embed ---------- */
-    document.querySelectorAll('.video-card:not(.is-coming-soon)').forEach(card => {
+    document.querySelectorAll('.video-card').forEach(card => {
         const trigger = card.querySelector('.video-card-media');
         const videoId = card.dataset.youtubeId;
         if (!trigger || !videoId) return;
@@ -247,19 +175,37 @@ document.addEventListener("DOMContentLoaded", () => {
     const photos = document.querySelectorAll("#gallery img");
     if (!photos.length) return;
 
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
     // Give each photo-block an ID derived from the image filename
     photos.forEach(img => {
         const slug = img.src.split('/').pop().replace(/\.[a-zA-Z]+$/, '');
         img.closest('.photo-block').id = slug;
     });
 
+    // Fade photos in as they finish loading (see ".js #gallery img" in styles.css)
     photos.forEach(img => {
+        const show = () => img.classList.add("loaded");
         if (img.complete) {
-            img.classList.add("loaded");
+            show();
         } else {
-            img.addEventListener("load", () => img.classList.add("loaded"));
+            img.addEventListener("load", show);
+            img.addEventListener("error", show);
         }
     });
+
+    // On wide screens portraits sit two per row. If a run of portraits is an odd number,
+    // the last one is centred instead of leaving an empty half-row.
+    let portraitRun = [];
+    const closePortraitRun = () => {
+        if (portraitRun.length % 2 === 1) portraitRun[portraitRun.length - 1].classList.add('portrait-solo');
+        portraitRun = [];
+    };
+    document.querySelectorAll('#gallery .photo-block').forEach(block => {
+        if (block.classList.contains('portrait')) portraitRun.push(block);
+        else closePortraitRun();
+    });
+    closePortraitRun();
 
     // Disable right-click, dragging, and mobile long-press
     photos.forEach(img => {
@@ -275,7 +221,7 @@ document.addEventListener("DOMContentLoaded", () => {
         img.addEventListener("touchmove", () => clearTimeout(pressTimer));
     });
 
-    // Reveal photograph title and update URL hash on click
+    // Clicking a photo marks it as selected (showing its copy-link icon on mouse devices) and updates the URL hash
     document.querySelectorAll('.photo-block img').forEach(img => {
         img.addEventListener('click', () => {
             const block = img.parentElement;
@@ -289,30 +235,36 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Add a copy-link button to each caption
+    const ICON_LINK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>';
+    const ICON_CHECK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>';
+
     document.querySelectorAll('.photo-caption').forEach(caption => {
         const btn = document.createElement('button');
-        btn.textContent = '🔗';
+        btn.type = 'button';
         btn.className = 'share-btn';
         btn.title = 'Copy link';
+        btn.setAttribute('aria-label', 'Copy link to this photo');
+        btn.innerHTML = ICON_LINK;
         btn.addEventListener('click', (e) => {
             e.stopPropagation();
             const block = caption.closest('.photo-block');
             const url = `${window.location.origin}${window.location.pathname}#${block.id}`;
             navigator.clipboard.writeText(url).then(() => {
-                btn.textContent = '✓';
-                setTimeout(() => btn.textContent = '🔗', 2000);
+                btn.innerHTML = ICON_CHECK;
+                setTimeout(() => { btn.innerHTML = ICON_LINK; }, 2000);
             });
         });
         caption.appendChild(btn);
     });
 
-    // On page load, check for a hash and scroll to / open that photo
+    // On page load, check for a hash and scroll to / open that photo.
+    // (getElementById, not querySelector: IDs here start with a digit, which is not a valid CSS selector.)
     if (location.hash) {
-        const target = document.querySelector(location.hash);
+        const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
         if (target) {
             target.classList.add('active');
             setTimeout(() => {
-                target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                target.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'center' });
             }, 100);
         }
     }

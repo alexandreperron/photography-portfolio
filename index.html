@@ -23,6 +23,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&display=swap" rel="stylesheet">
+    <script>document.documentElement.classList.add('js')</script>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="favicon-32.png">
 </head>
@@ -39,9 +40,8 @@
         <div class="nav-panel" id="navPanel">
             <nav class="side-nav">
                 <a href="./index.html" class="side-link is-active" data-i18n="nav.featured">Featured</a>
-                <!--<a href="./projects.html" class="side-link" data-i18n="nav.projects">Projects</a>-->
-                <a href="./about.html" class="side-link" data-i18n="nav.about">About</a>
-                <a href="./blog.html" class="side-link" data-i18n="nav.blog">Blog</a>
+                <a href="about.html" class="side-link" data-i18n="nav.about">About</a>
+                <a href="blog.html" class="side-link" data-i18n="nav.blog">Blog</a>
             </nav>
             <div class="sidebar-foot">
                 <a href="https://www.instagram.com/alexndreper" target="_blank" class="foot-link">Instagram</a>
@@ -59,92 +59,88 @@
     <!-- Content -->
     <main class="content">
 
-        <div class="page-head">
-            <p class="eyebrow" data-i18n="gallery.eyebrow">Selected Work</p>
-            <h1 data-i18n="nav.featured">Featured</h1>
-            <p class="lede" data-i18n="gallery.lede">A curated set of photographs</p>
-        </div>
+        <h1 class="sr-only" data-i18n="nav.featured">Featured</h1>
 
         <div id="gallery">
 
             <div class="photo-block landscape">
-                <img data-page="1" width="2048" height="1367" src="https://alexandreperron.github.io/photography-portfolio/images/1799-winter-solstice.jpg" loading="lazy" alt="Seascape winter photo of Gaspesie">
-                <div class="photo-caption">Winter solstice — 2025</div>
+                <img width="2048" height="1367" src="https://alexandreperron.github.io/photography-portfolio/images/1799-winter-solstice.jpg" fetchpriority="high" alt="Seascape winter photo of Gaspesie">
+                <div class="photo-caption">Winter solstice <span class="photo-year">2025</span></div>
             </div>
 
             <div class="photo-block landscape">
-                <img data-page="1" width="2048" height="1367" src="https://alexandreperron.github.io/photography-portfolio/images/20260801-NIZ_0999-web.jpg" loading="lazy" alt="Pêcheur Métis-sur-mer">
-                <div class="photo-caption">The fisherman — 2026</div>
+                <img width="2048" height="1367" src="https://alexandreperron.github.io/photography-portfolio/images/20260801-NIZ_0999-web.jpg" loading="lazy" alt="Pêcheur Métis-sur-mer">
+                <div class="photo-caption">The fisherman <span class="photo-year">2026</span></div>
             </div>
 
             <div class="photo-block landscape">
-                <img data-page="1" width="2048" height="1367" src="https://alexandreperron.github.io/photography-portfolio/images/3067-moon-landing.jpg" alt="Seaside landscape in winter by Alexandre Perron">
-                <div class="photo-caption">Moon landing — 2026</div>
+                <img width="2048" height="1367" src="https://alexandreperron.github.io/photography-portfolio/images/3067-moon-landing.jpg" loading="lazy" alt="Seaside landscape in winter by Alexandre Perron">
+                <div class="photo-caption">Moon landing <span class="photo-year">2026</span></div>
             </div>
 
             <div class="photo-block landscape">
-                <img data-page="1" width="2048" height="1367" src="https://alexandreperron.github.io/photography-portfolio/images/20260701-NIZ_9082-web.jpg" loading="lazy" alt="Pêcheurs en Gaspésie">
-                <div class="photo-caption">Home staple — 2026</div>
+                <img width="2048" height="1367" src="https://alexandreperron.github.io/photography-portfolio/images/20260701-NIZ_9082-web.jpg" loading="lazy" alt="Pêcheurs en Gaspésie">
+                <div class="photo-caption">Home staple <span class="photo-year">2026</span></div>
             </div>
 
             <div class="photo-block landscape">
-                <img data-page="1" width="2048" height="1367" src="https://alexandreperron.github.io/photography-portfolio/images/20260517-NIZ_7392-rite-of-spring.jpg" loading="lazy" alt="Bird migration photograph by Alexandre Perron">
-                <div class="photo-caption">Rite of spring — 2026</div>
+                <img width="2048" height="1367" src="https://alexandreperron.github.io/photography-portfolio/images/20260517-NIZ_7392-rite-of-spring.jpg" loading="lazy" alt="Bird migration photograph by Alexandre Perron">
+                <div class="photo-caption">Rite of spring <span class="photo-year">2026</span></div>
             </div>
 
             <div class="photo-block landscape">
-                <img data-page="1" width="2048" height="1367" src="https://alexandreperron.github.io/photography-portfolio/images/2162-harbor-bloc.jpg" alt="Iceberg photography by Alexandre Perron">
-                <div class="photo-caption">North harbor — 2026</div>
+                <img width="2048" height="1367" src="https://alexandreperron.github.io/photography-portfolio/images/2162-harbor-bloc.jpg" loading="lazy" alt="Iceberg photography by Alexandre Perron">
+                <div class="photo-caption">North harbor <span class="photo-year">2026</span></div>
             </div>
 
             <div class="photo-block landscape">
-                <img data-page="1" width="2048" height="1367" src="https://alexandreperron.github.io/photography-portfolio/images/2972-dont-look-down.jpg" loading="lazy" alt="Montagne en Gaspésie en hiver">
-                <div class="photo-caption">Don't look down — 2026</div>
+                <img width="2048" height="1367" src="https://alexandreperron.github.io/photography-portfolio/images/2972-dont-look-down.jpg" loading="lazy" alt="Montagne en Gaspésie en hiver">
+                <div class="photo-caption">Don't look down <span class="photo-year">2026</span></div>
             </div>
 
             <div class="photo-block landscape">
-                <img data-page="1" width="2048" height="1367" src="https://alexandreperron.github.io/photography-portfolio/images/20260813-NIZ_1337.jpg" alt="Gaspesie mountain photography by Alexandre Perron">
-                <div class="photo-caption">The staircase — 2026</div>
+                <img width="2048" height="1367" src="https://alexandreperron.github.io/photography-portfolio/images/20260813-NIZ_1337.jpg" loading="lazy" alt="Gaspesie mountain photography by Alexandre Perron">
+                <div class="photo-caption">The staircase <span class="photo-year">2026</span></div>
             </div>
 
             <div class="photo-block landscape">
-                <img data-page="1" width="2048" height="1367" src="https://alexandreperron.github.io/photography-portfolio/images/3824-the-beginning-6.jpg" alt="Gaspesie landscape by Alexandre Perron">
-                <div class="photo-caption">The beginning — 2026</div>
+                <img width="2048" height="1367" src="https://alexandreperron.github.io/photography-portfolio/images/3824-the-beginning-6.jpg" loading="lazy" alt="Gaspesie landscape by Alexandre Perron">
+                <div class="photo-caption">The beginning <span class="photo-year">2026</span></div>
             </div>
 
             <div class="photo-block landscape">
-                <img data-page="1" width="2048" height="1367" src="https://alexandreperron.github.io/photography-portfolio/images/2252-aurora.jpg" loading="lazy" alt="Northern lights in Gaspesie by Alexandre Perron">
-                <div class="photo-caption">Solar signals I — 2026</div>
+                <img width="2048" height="1367" src="https://alexandreperron.github.io/photography-portfolio/images/2252-aurora.jpg" loading="lazy" alt="Northern lights in Gaspesie by Alexandre Perron">
+                <div class="photo-caption">Solar signals I <span class="photo-year">2026</span></div>
             </div>
 
             <div class="photo-block landscape">
-                <img data-page="1" width="2048" height="1367" src="https://alexandreperron.github.io/photography-portfolio/images/5107-spaceship-v6-web.jpg" loading="lazy" alt="Berges glacées du Bas-saint-laurent">
-                <div class="photo-caption">Spaceship — 2026</div>
+                <img width="2048" height="1367" src="https://alexandreperron.github.io/photography-portfolio/images/5107-spaceship-v6-web.jpg" loading="lazy" alt="Berges glacées du Bas-saint-laurent">
+                <div class="photo-caption">Spaceship <span class="photo-year">2026</span></div>
             </div>
 
             <div class="photo-block landscape">
-                <img data-page="1" width="2048" height="1367" src="https://alexandreperron.github.io/photography-portfolio/images/5256-slow-down.jpg" loading="lazy" alt="Slow exposure of a frozen seascape at sunset in Gaspésie by Alexandre Perron">
-                <div class="photo-caption">Slow down — 2026</div>
+                <img width="2048" height="1367" src="https://alexandreperron.github.io/photography-portfolio/images/5256-slow-down.jpg" loading="lazy" alt="Slow exposure of a frozen seascape at sunset in Gaspésie by Alexandre Perron">
+                <div class="photo-caption">Slow down <span class="photo-year">2026</span></div>
             </div>
 
             <div class="photo-block landscape">
-                <img data-page="1" width="2048" height="1367" src="https://alexandreperron.github.io/photography-portfolio/images/20260731-NIZ_0783-web.jpg" loading="lazy" alt="Husky at sunset">
-                <div class="photo-caption">At dusk — 2026</div>
+                <img width="2048" height="1367" src="https://alexandreperron.github.io/photography-portfolio/images/20260731-NIZ_0783-web.jpg" loading="lazy" alt="Husky at sunset">
+                <div class="photo-caption">At dusk <span class="photo-year">2026</span></div>
             </div>
 
             <div class="photo-block portrait">
-                <img data-page="1" width="1367" height="2048" src="https://alexandreperron.github.io/photography-portfolio/images/6725-a-rising.jpg" loading="lazy" alt="Husky at sunset">
-                <div class="photo-caption">A rising — 2026</div>
+                <img width="1367" height="2048" src="https://alexandreperron.github.io/photography-portfolio/images/6725-a-rising.jpg" loading="lazy" alt="Husky at sunset">
+                <div class="photo-caption">A rising <span class="photo-year">2026</span></div>
             </div>
 
             <div class="photo-block portrait">
-                <img data-page="1" width="1367" height="2048" src="https://alexandreperron.github.io/photography-portfolio/images/5385-evening-at-the-window-web.jpg" loading="lazy" alt="Husky at sunset">
-                <div class="photo-caption">Evening at the window — 2026</div>
+                <img width="1367" height="2048" src="https://alexandreperron.github.io/photography-portfolio/images/5385-evening-at-the-window-web.jpg" loading="lazy" alt="Husky at sunset">
+                <div class="photo-caption">Evening at the window <span class="photo-year">2026</span></div>
             </div>
 
             <div class="photo-block landscape">
-                <img data-page="1" width="2048" height="1367" src="https://alexandreperron.github.io/photography-portfolio/images/20260830-NIZ_2152-a-bees-bed-web.jpg" loading="lazy" alt="Flowers and bokeh">
-                <div class="photo-caption">A bee's bed — 2026</div>
+                <img width="2048" height="1367" src="https://alexandreperron.github.io/photography-portfolio/images/20260830-NIZ_2152-a-bees-bed-web.jpg" loading="lazy" alt="Flowers and bokeh">
+                <div class="photo-caption">A bee's bed <span class="photo-year">2026</span></div>
             </div>
 
         </div>
