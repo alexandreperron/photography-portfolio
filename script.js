@@ -20,9 +20,9 @@ const translations = {
         'menu.open': 'Menu',
         'menu.close': 'Fermer',
 
-        'about.p1': "La majorité de mon travail commence près de chez moi, sur les rives de l'estuaire. Promenades côtières avec mon husky Apollo, randonnées sur les sommets environnants.",
+        'about.p1': "La majorité de mon travail commence près de chez moi, sur les rives de l'estuaire du Saint-Laurent. Promenades côtières avec mon husky Apollo, randonnées sur les sommets environnants.",
         'about.p2': "Puis les escapades urbaines et voyages plus lointains.",
-        'about.p3': "Je photographie souvent avec un équipement minimaliste, privilégiant une approche réfléchie et posée de la composition lorsque possible.",
+        'about.p3': "Je préfère photographier avec un équipement minimaliste, privilégiant une approche réfléchie et posée de la composition.",
         'about.p4': "Ma photographie est ma façon de partager - ce que je découvre et apprécie.",
         'about.p5': "Merci de votre visite, et n'hésitez pas à m'écrire si cela vous parle.",
         'contact.lede': "Un projet, une demande d'impression, ou simplement envie de dire bonjour? Envoyez un message ci-dessous.",
